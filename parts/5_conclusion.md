@@ -44,7 +44,6 @@ This presents three main drawbacks:
   and then to "lift" it.
   This is not satisfactory from a computational point of view, where one would like to have
   a streamlined procedure that yield the input $L$ directly from the original signal.
-\end{itemize}
 
 To improve the model, it is crucial to devise a novel lift procedure allowing to bypass these problems.
 
@@ -150,16 +149,12 @@ a preliminary study of the image reconstruction was needed
 in order to understand the sound model and the challenges that are
 faced in adapting the initial model for sound reconstruction.
 This triggered learning new mathematical concepts.
-I did a general reading of *A Comprehensive Introduction to Sub-Riemannian Geometry*
-by Andrei Agrachev, Davide Barilari, and Ugo Boscain [@subriemannian].
-This reading allowed me to understand the context of sub-Riemannian geometry
-which has applications in control theory and PDEs.
-The second book I perused was *Foundations of Time-Frequency Analysis* by Gröchenig [@grochenig2001]
+I did a general reading of *Foundations of Time-Frequency Analysis* by Gröchenig [@grochenig2001]
 which served as a reference throughout the internship.
 While I had a working understanding of basic Fourier analysis thanks to INSA courses
 and a familiarity of the Uncertainty Principle and the Short-Time Fourier Transform
 thanks to my work on music information retreival for my final Master's project.
-The book explains these principles regourously and also serves as a great source
+The book explains these principles rigourously and also serves as a great source
 for learning about the Heisenberg Group and Wavelet Transforms which are the basis
 of the proposed model.
 

@@ -63,15 +63,15 @@ Since $V_w s\in L^2(\R^2)$, let $\tilde s\in L^2(\R)$ be defined as
 \end{equation}
 We therefore have, for all $\phi\in L^2(\R)$, using Parseval's formula
 \begin{align}
-\dotp{\tilde s, \phi}_{L^2(\R}
+\dotp{\tilde s, \phi}_{L^2(\R)}
 &= \frac{1}{\dotp{w,h}} \iint_{\R^2} V_w s(\tau,\w) \dotp{M_\w T_\tau h, \phi}_{L^2(\R)} \dw\dtau\\
 &= \frac{1}{\dotp{w,h}} \iint_{\R^2} V_w s(\tau,\w) \bbar{\dotp{\phi,M_\w T_\tau h}}_{L^2(\R)} \dw\dtau\\
 &= \frac{1}{\dotp{w,h}} \iint_{\R^2} V_w s(\tau,\w) \bbar{V_h \phi(\tau,\w)} \dw\dtau\\
-&= \frac{1}{\dotp{w,h}} \dotp{V_w s, V_h \phi}_{L^2(\R^2}\\
-&= \dotp{s, \phi}_{L^2(\R}
+&= \frac{1}{\dotp{w,h}} \dotp{V_w s, V_h \phi}_{L^2(\R^2)}\\
+&= \dotp{s, \phi}_{L^2(\R)}
 \end{align}
 
-Since $\dotp{\tilde s,\phi}_{L^2(\R}=\dotp{s,\phi}_{L^2(\R},\forall\phi\in L^2(\R)$
+Since $\dotp{\tilde s,\phi}_{L^2(\R)}=\dotp{s,\phi}_{L^2(\R)},\forall\phi\in L^2(\R)$
 then in the weak sense $\tilde s = s$.
 \end{proof}
 

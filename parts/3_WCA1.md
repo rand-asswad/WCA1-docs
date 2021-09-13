@@ -16,9 +16,7 @@ along the cochlea spiral, different regions of the cochlea are sensitive to diff
 Hair cells close to the base are more sensitive to low-frequency sounds and those near the apex
 are more sensitive to high-frequency sounds [@yang1992].
 
-```{r cochlea, echo=FALSE, out.width="50%", fig.cap="Perceived pitch of a sound depends on the location in the cochlea that the sound wave stimulated."}
-include_graphics("img/cochlea.png")
-```
+![Perceived pitch of a sound depends on the location in the cochlea that the sound wave stimulated [@boscain2021].](img/cochlea.png){width=50%}
 
 This spatial segregation of frequency sensitivity in the cochlea
 means that the primary auditory cortex receives a time-frequency representation of the sound.
@@ -47,9 +45,8 @@ with the Heisenberg group structure.
 Henceforth, the sound is processed in its 3D representation,
 that is the obtained lift $L(\tau,\w,\nu)$.
 
-Similarly to the V1 model, the sound is reconstructed solving
+Similarly to the V1 model, the sound is reconstructed by solving
 the Wilson-Cowan integro-differential equation.
-The Wilson-Cowan has been succesfully applied to describe the evolution of neural activations.
 
 Finally, the solution to the Wilson-Cowan equations is projected into
 the time-frequency representation which gives a sound signal through
@@ -87,7 +84,7 @@ This is established by multiplying a segment of the signal by a weight function,
 that is smooth, compactly supported, and centered around $0$,
 referred to as *window*.
 Essentially, the STFT $S(\tau,\w)$ is the Fourier transform of $s(t)w(t-\tau)$
-the signal taken over a sliding window along the time axis.
+(the signal taken over a sliding window along the time axis.)
 
 \begin{equation}
 S(\tau,\w) = \int_\R s(t)w(t-\tau)e^{-2\pi it\w} \dt
@@ -271,7 +268,7 @@ s(t) &=\frac{1}{\dotp{w,h}} \iint_{\R^2}V_w s(\tau,\w)M_\w T_\tau h(t) \dw\dtau\
 
 ### Griffin-Lim Algorithm
 
-The practical use of the inverse STFT (iSTFT) is to obtain the signal
+The practical use of the inverse STFT is to obtain the signal
 from a spectrum that has undergone some changes.
 Daniel W. Griffin and Jae S. Lim [@griffin1983] proposed
 an efficient algorithm for signal estimation from the modified STFT.

@@ -6,7 +6,7 @@ The Laboratory of Signals and Systems (L2S) is a French
 research laboratory created in 1974, operated by the CNRS,
 CentraleSupélec and the University of Paris-Saclay.
 
-Research at L2S is conducted and fundamental and applied mathematics,
+Research at L2S is conducted in fundamental and applied mathematics,
 divided into three main fields:
 Systems and Control, Signal processing and Statistics,
 and Networks and Telecommunications.
@@ -25,10 +25,10 @@ Sorbonne Université) has supervised me closely along with Dario Prandi.
 
 As the intership took place during the COVID-19 pandemic outbreak,
 I worked from home.
-An open channel on Microsoft Teams would allow us to communicate
+An open channel on Microsoft Teams allowed us to communicate
 whenever it was needed. Moreover, a visio-conference call
-is scheduled to discuss the established work and the next tasks.
-In addition, whenever we had the chance an in-person meeting is organized
+was scheduled to discuss the established work and the following tasks.
+In addition, whenever we had the chance, an in-person meeting was organized
 allowing a prolonged discussion of the on-going work.
 
 ## Internship mission

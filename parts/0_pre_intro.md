@@ -2,7 +2,7 @@
 
 First I would like to thank my supervisors, Dario Prandi and Ugo Boscain
 for the great opportunity and their invaluable advice and guidance throughout the internship,
-as well as their support along with Giuseppina Turco in my project persuing a PhD.
+as well as their support along with Giuseppina Turco in my project of persuing a PhD.
 I would also like to thank Ludovic Sacchelli along with them for the opportunity
 to coauther a paper in the GSI 2021 conference.
 
@@ -16,7 +16,7 @@ at University of Rouen Normandie, especially Jean-Philippe Dubernard.
 Most importantly, I thank my family, without their tremendous support
 it would be impossible for me to complete my studies.
 My parents for prioritizing our education, Raja and Madeleine
-for their unwaivoring support throught my education,
+for their unwaivoring support throughout my education,
 Jad and Mery for their care and support despite the distance.
 
 Finally, I want to thank my second Rouen family, Ibrahim
