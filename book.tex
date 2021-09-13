@@ -272,7 +272,7 @@
 
 First I would like to thank my supervisors, Dario Prandi and Ugo Boscain
 for the great opportunity and their invaluable advice and guidance throughout the internship,
-as well as their support along with Giuseppina Turco in my project persuing a PhD.
+as well as their support along with Giuseppina Turco in my project of persuing a PhD.
 I would also like to thank Ludovic Sacchelli along with them for the opportunity
 to coauther a paper in the GSI 2021 conference.
 
@@ -286,7 +286,7 @@ at University of Rouen Normandie, especially Jean-Philippe Dubernard.
 Most importantly, I thank my family, without their tremendous support
 it would be impossible for me to complete my studies.
 My parents for prioritizing our education, Raja and Madeleine
-for their unwaivoring support throught my education,
+for their unwaivoring support throughout my education,
 Jad and Mery for their care and support despite the distance.
 
 Finally, I want to thank my second Rouen family, Ibrahim
@@ -308,7 +308,7 @@ The Laboratory of Signals and Systems (L2S) is a French
 research laboratory created in 1974, operated by the CNRS,
 CentraleSupélec and the University of Paris-Saclay.
 
-Research at L2S is conducted and fundamental and applied mathematics,
+Research at L2S is conducted in fundamental and applied mathematics,
 divided into three main fields:
 Systems and Control, Signal processing and Statistics,
 and Networks and Telecommunications.
@@ -317,7 +317,7 @@ My supervisor Dario Prandi, is a member of the COMEDY team
 which focuses on analysis of structural properties
 and control of classes of dynamical systems.
 The main focus is on fundamental results, but with a strong
-link to applications {[}\protect\hyperlink{ref-l2s}{31}{]}.
+link to applications {[}\protect\hyperlink{ref-l2s}{30}{]}.
 
 Dario Prandi has been working on a bio-inspired model for sound
 reconstruction, along with Ugo Boscain, Ludovic Sacchelli,
@@ -327,10 +327,10 @@ Sorbonne Université) has supervised me closely along with Dario Prandi.
 
 As the intership took place during the COVID-19 pandemic outbreak,
 I worked from home.
-An open channel on Microsoft Teams would allow us to communicate
+An open channel on Microsoft Teams allowed us to communicate
 whenever it was needed. Moreover, a visio-conference call
-is scheduled to discuss the established work and the next tasks.
-In addition, whenever we had the chance an in-person meeting is organized
+was scheduled to discuss the established work and the following tasks.
+In addition, whenever we had the chance, an in-person meeting was organized
 allowing a prolonged discussion of the on-going work.
 
 \hypertarget{internship-mission}{%
@@ -362,12 +362,12 @@ faced in adapting the initial model for sound reconstruction.
 \subsection{Neoro-geometric model of V1}\label{neoro-geometric-model-of-v1}}
 
 My supervisors and their colleagues have presented a cortical-inspired
-image reconstruction algorithm {[}\protect\hyperlink{ref-bertalmio2018}{4},\protect\hyperlink{ref-boscain2017}{5}{]} based
-on the Citti-Petitot-Sarti (CPS) model of the human primary visual cortex V1 {[}\protect\hyperlink{ref-citti2006}{9},\protect\hyperlink{ref-petitot1999}{22}{]}.
+image reconstruction algorithm {[}\protect\hyperlink{ref-bertalmio2018}{3},\protect\hyperlink{ref-boscain2017}{4}{]} based
+on the Citti-Petitot-Sarti (CPS) model of the human primary visual cortex V1 {[}\protect\hyperlink{ref-citti2006}{8},\protect\hyperlink{ref-petitot1999}{21}{]}.
 
-The CPS model is based on the work of Hubel and Wiesel {[}\protect\hyperlink{ref-hubel1959}{17}{]} who observed that there are
+The CPS model is based on the work of Hubel and Wiesel {[}\protect\hyperlink{ref-hubel1959}{16}{]} who observed that there are
 groups of neurons sensitive to positions and directions.
-This has inspired Hoffman {[}\protect\hyperlink{ref-hoffman1989}{16}{]} to model V1 as a contact space
+This has inspired Hoffman {[}\protect\hyperlink{ref-hoffman1989}{15}{]} to model V1 as a contact space
 (a three-dimensional manifold endowed with a smooth map).
 Since an image can be seen as a function \(f:\mathbb{R}^2\rightarrow\mathbb{R}_+\) representing
 the grey level at given coordinates, the visual cortex adds
@@ -378,14 +378,14 @@ The model therefore lifts the image into \(\mathbb{R}^2\times P^1\).
 \hypertarget{wilson-cowan-model-in-v1}{%
 \subsection{Wilson-Cowan model in V1}\label{wilson-cowan-model-in-v1}}
 
-The Wilson-Cowan (WC) model {[}\protect\hyperlink{ref-wilson1972}{27}{]} describes the evolution of neural activations,
+The Wilson-Cowan (WC) model {[}\protect\hyperlink{ref-wilson1972}{26}{]} describes the evolution of neural activations,
 more precisely, it describes the evolution of excitatory and inhibitory activity in
 a synaptically coupled neuronal network.
 
 The interaction between the hypercolumns in V1 can be described through
-the WC equations {[}\protect\hyperlink{ref-bressloff2002}{7}{]}.
+the WC equations {[}\protect\hyperlink{ref-bressloff2002}{6}{]}.
 An integro-differential equation describing the state \(a(x,\theta,t)\) of a population
-of neurons with V1 coordinates \(x\in\mathbb{R}^2\) and orientation \(\theta\in P^1\) at time \(t>0\) {[}\protect\hyperlink{ref-bertalmio2018}{4}{]}.
+of neurons with V1 coordinates \(x\in\mathbb{R}^2\) and orientation \(\theta\in P^1\) at time \(t>0\) {[}\protect\hyperlink{ref-bertalmio2018}{3}{]}.
 
 \begin{equation}
 \frac{\partial}{\partial t}a(x,\theta,t) = -\alpha a(x,\theta,t) + \nu
@@ -421,7 +421,7 @@ of neurons with V1 coordinates \(x\in\mathbb{R}^2\) and orientation \(\theta\in 
 
 The motivation behind the application of the model in sound reconstruction
 is the idea that a sound can be seen as an image in the time-frequency domain.
-The primary auditory cortex A1 receives the sensory input directly from the cochlea {[}\protect\hyperlink{ref-dallos1996}{11}{]},
+The primary auditory cortex A1 receives the sensory input directly from the cochlea {[}\protect\hyperlink{ref-dallos1996}{10}{]},
 which is a spiral-shaped fluid-filled cavity that composes the inner ear.
 
 The mechanical vibrations along the basilar membrane are transduced into electrical activity
@@ -431,15 +431,12 @@ which convey these electrical potentials to the central auditory system.
 Since these auditory-nerve fibers (sensors or inner hair cells) are topographically ordered
 along the cochlea spiral, different regions of the cochlea are sensitive to different frequencies.
 Hair cells close to the base are more sensitive to low-frequency sounds and those near the apex
-are more sensitive to high-frequency sounds {[}\protect\hyperlink{ref-yang1992}{28}{]}.
+are more sensitive to high-frequency sounds {[}\protect\hyperlink{ref-yang1992}{27}{]}.
 
-\begin{figure}[H]
-
-{\centering \includegraphics[width=0.5\linewidth]{img/cochlea} 
-
-}
-
-\caption{Perceived pitch of a sound depends on the location in the cochlea that the sound wave stimulated.}\label{fig:cochlea}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{img/cochlea.png}
+\caption{Perceived pitch of a sound depends on the location in the cochlea that the sound wave stimulated {[}\protect\hyperlink{ref-boscain2021}{5}{]}.}
 \end{figure}
 
 This spatial segregation of frequency sensitivity in the cochlea
@@ -454,7 +451,7 @@ therefore the invariance by rototranslation is lost.
 Moreover, the image reconstruction would evolve the WC equation on the entire
 image simultaneously. However, the sound image (spectrogram) does not reach
 the auditory cortex simultaneously but sequentially.
-Hence, the reconstruction can be performed only in a sliding window {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+Hence, the reconstruction can be performed only in a sliding window {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \hypertarget{sound-reconstruction-pipeline}{%
 \subsection{Sound reconstruction pipeline}\label{sound-reconstruction-pipeline}}
@@ -470,13 +467,12 @@ with the Heisenberg group structure.
 Henceforth, the sound is processed in its 3D representation,
 that is the obtained lift \(L(\tau,\omega,\nu)\).
 
-Similarly to the V1 model, the sound is reconstructed solving
+Similarly to the V1 model, the sound is reconstructed by solving
 the Wilson-Cowan integro-differential equation.
-The Wilson-Cowan has been succesfully applied to describe the evolution of neural activations.
 
 Finally, the solution to the Wilson-Cowan equations is projected into
 the time-frequency representation which gives a sound signal through
-an inverse short-time Fourier transform {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+an inverse short-time Fourier transform {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \begin{figure}
 \centering
@@ -499,7 +495,7 @@ makes visible different features of \(s\).
 A time-frequency representation would combine the features
 of both \(s\) and \(\hat s\) into a single function.
 Such representation provides an \emph{instantaneous frequency spectrum}
-of the signal at any given time {[}\protect\hyperlink{ref-grochenig2001}{14}{]}.
+of the signal at any given time {[}\protect\hyperlink{ref-grochenig2001}{13}{]}.
 
 \hypertarget{the-short-time-fourier-transform}{%
 \subsubsection{The Short-Time Fourier Transform}\label{the-short-time-fourier-transform}}
@@ -511,12 +507,12 @@ In order to obtain a Time-Frequency representation of a signal \(s\),
 a Fourier transform is taken over a restricted interval
 of the original signal \emph{sequentially}.
 Since a sharp cut-off introduces discontinuities and aliasing issues,
-a smooth cut-off is prefered {[}\protect\hyperlink{ref-grochenig2001}{14}{]}.
+a smooth cut-off is prefered {[}\protect\hyperlink{ref-grochenig2001}{13}{]}.
 This is established by multiplying a segment of the signal by a weight function,
 that is smooth, compactly supported, and centered around \(0\),
 referred to as \emph{window}.
 Essentially, the STFT \(S(\tau,\omega)\) is the Fourier transform of \(s(t)w(t-\tau)\)
-the signal taken over a sliding window along the time axis.
+(the signal taken over a sliding window along the time axis.)
 
 \begin{equation}
 S(\tau,\omega) = \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi it\omega} \mathrm{d}t
@@ -525,7 +521,7 @@ S(\tau,\omega) = \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi it\omega} \mathrm{d}t
 \begin{figure}
 \centering
 \includegraphics[width=0.4\textwidth,height=\textheight]{img/stft_grochenig.png}
-\caption{Signal windowing for the STFT {[}\protect\hyperlink{ref-grochenig2001}{14}{]}}
+\caption{Signal windowing for the STFT {[}\protect\hyperlink{ref-grochenig2001}{13}{]}}
 \end{figure}
 
 \hypertarget{time-and-frequency-shifts-operators}{%
@@ -552,7 +548,7 @@ S(\tau,\omega) &= \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi it\omega} \mathrm{d}t\\
 \end{align}
 
 We can redefine the STFT as an operator \(V_w\) on \(s\in L^2(\mathbb{R})\)
-defined in function of \(T_\tau\) and \(M_\omega\) {[}\protect\hyperlink{ref-boscain2021}{6},\protect\hyperlink{ref-grochenig2001}{14}{]}.
+defined in function of \(T_\tau\) and \(M_\omega\) {[}\protect\hyperlink{ref-boscain2021}{5},\protect\hyperlink{ref-grochenig2001}{13}{]}.
 
 \begin{equation}\label{eq:stft_operator}
 V_w s(\tau,\omega) = \left\langle s, M_\omega T_\tau w\right\rangle_{L^2(\mathbb{R})}
@@ -609,7 +605,7 @@ spectral leakage.
 \end{figure}
 
 Moreover, as we will see in the next sections, the STFT is invertible.
-However, the STFT parameters need to satisfy the two following constraints {[}\protect\hyperlink{ref-griffin1983}{13},\protect\hyperlink{ref-muller2015}{20}{]}:
+However, the STFT parameters need to satisfy the two following constraints {[}\protect\hyperlink{ref-griffin1983}{12},\protect\hyperlink{ref-muller2015}{19}{]}:
 
 \begin{itemize}
 \tightlist
@@ -647,8 +643,8 @@ imposing a stronger condition.
 \end{figure}
 
 In typical applications, the window functions used are non-negative,
-smooth, bell-shaped curves {[}\protect\hyperlink{ref-roads2002}{25}{]}.
-A comprehensive list of windows and their properties may be found in {[}\protect\hyperlink{ref-heinzel2002}{15}{]}.
+smooth, bell-shaped curves {[}\protect\hyperlink{ref-roads2002}{24}{]}.
+A comprehensive list of windows and their properties may be found in {[}\protect\hyperlink{ref-heinzel2002}{14}{]}.
 In our model we use the Hann window, which satisfies the COLA condition
 for any overlap ratio of \(r=\frac{n}{n+1},n\in\mathbb{N}^*\).
 
@@ -667,7 +663,7 @@ As previously stated, both \(s\) and \(\hat s\) contain the exact same informati
 However, there is a fundamental limit to the accuracy with which the values
 for certain pairs of physical pairs can be observed.
 A known example to issue is Heisenberg's uncertainty principle regarding
-the position of a particle and its momentum {[}\protect\hyperlink{ref-sen2014}{26}{]}.
+the position of a particle and its momentum {[}\protect\hyperlink{ref-sen2014}{25}{]}.
 Similarly, time and frequency are a pair of complementary variables.
 
 In the context of time-frequency analysis, the Heisenberg-Gabor limit
@@ -681,7 +677,7 @@ where \(\sigma_t\) and \(\sigma_\omega\) are the standard deviations of the time
 The Gabor limit means essentially that
 ``a realizable signal occupies a region of area at least one in the time-frequency plane.''
 Which means that we cannot sharply localize a signal in both the time domain and frequency domain.
-This makes the concept of an instantaneous frequency impossible {[}\protect\hyperlink{ref-grochenig2001}{14}{]}.
+This makes the concept of an instantaneous frequency impossible {[}\protect\hyperlink{ref-grochenig2001}{13}{]}.
 
 A direct result of the uncertainty principle is the fact that high temporal resolution
 and frequency resolution cannot be acheived at the same time.
@@ -728,9 +724,9 @@ s(t) &=\frac{1}{\left\langle w,h\right\rangle} \iint_{\mathbb{R}^2}V_w s(\tau,\o
 \hypertarget{griffin-lim-algorithm}{%
 \subsubsection{Griffin-Lim Algorithm}\label{griffin-lim-algorithm}}
 
-The practical use of the inverse STFT (iSTFT) is to obtain the signal
+The practical use of the inverse STFT is to obtain the signal
 from a spectrum that has undergone some changes.
-Daniel W. Griffin and Jae S. Lim {[}\protect\hyperlink{ref-griffin1983}{13}{]} proposed
+Daniel W. Griffin and Jae S. Lim {[}\protect\hyperlink{ref-griffin1983}{12}{]} proposed
 an efficient algorithm for signal estimation from the modified STFT.
 The GLA algorithm minimizes the mean squared error between the STFT magnitude
 of the estimated signal and the modified STFT magnitude.
@@ -742,7 +738,7 @@ Let \(x\in L^2(\mathbb{R})\) be a realizable signal and \(X=V_w x\in L^2(\mathbb
 be its STFT. Let \(Y\in L^2(\mathbb{R}^2)\) denote the modified STFT.
 It's worth noting that \(Y\), in general, is not necessarily an STFT
 in the sense that there might not be a signal \(y\in L^2(\mathbb{R})\)
-whose STFT is \(Y=V_w y\) {[}\protect\hyperlink{ref-griffin1983}{13}{]}.
+whose STFT is \(Y=V_w y\) {[}\protect\hyperlink{ref-griffin1983}{12}{]}.
 
 Let \(y_\tau \in L^2(\mathbb{R}^2)\) the inverse Fourier transform of \(Y\)
 with respect to the frequency \(\omega\) (its second variable)
@@ -827,7 +823,7 @@ So far, the sound signal is represented in the 2-dimensional space
 by the parametric curve \(t\mapsto(t,\omega(t))\).
 Nevertheless, we aim to lift our signal into the 3-dimensional \emph{augmented space}
 by adding the sensitivity to frequency variations \(\nu(t)=\mathrm{d}\omega(t)/\mathrm{d}t\).
-Similarly, the lifted curve is parameterized as \(t\mapsto(t,\omega(t),\nu(t))\) {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+Similarly, the lifted curve is parameterized as \(t\mapsto(t,\omega(t),\nu(t))\) {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \hypertarget{control-system}{%
 \subsubsection{Control system}\label{control-system}}
@@ -855,7 +851,7 @@ X_1\begin{pmatrix}\tau\\\omega\\\nu\end{pmatrix} = \begin{pmatrix}0\\0\\1\end{pm
 \end{equation}
 
 The vector fields \(X_0\) and \(X_1\) generate the Heisenberg group,
-and the space \(\left\{X_0+uX_1\vert u\in\mathbb{R}\right\}\) is a line in the \(\mathbb{R}^3\) {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+and the space \(\left\{X_0+uX_1\vert u\in\mathbb{R}\right\}\) is a line in the \(\mathbb{R}^3\) {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \hypertarget{lift-to-the-contact-space}{%
 \subsubsection{Lift to the contact space}\label{lift-to-the-contact-space}}
@@ -864,7 +860,7 @@ In the case of a general sound signal, each level line of the spectrogram
 \(\left\lvert S\right\rvert(\tau,\omega)\) is lifted to the contact space.
 This yeilds by the implicit function theorem the following subset
 of the contact space, which is a well-defined surface
-if \(\left\lvert S\right\rvert\in\mathcal{C}^2\) and \(\mathrm{Hess}\left\lvert S\right\rvert\) is non-degenerate {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+if \(\left\lvert S\right\rvert\in\mathcal{C}^2\) and \(\mathrm{Hess}\left\lvert S\right\rvert\) is non-degenerate {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \begin{equation}
 \Sigma = \left\{(\tau,\omega\nu)\in\mathbb{R}^3 \vert\nu\partial_\omega\left\lvert S\right\rvert(\tau,\omega) + \partial_\tau\left\lvert S\right\rvert(\tau,\omega) = 0\right\}
@@ -934,7 +930,7 @@ interval \(I_p\) for some reasonable \(p\)-value (e.g., \(p=0.95\)).
 A reasonable assumption for the distribution of \(X\) is that it follows
 a Cauchy distribution \(\mathrm{Cauchy}(x_0, \gamma)\).
 Indeed, this corresponds to assuming that \(\partial_\omega\left\lvert S\right\rvert\) and
-\(\partial_\tau\left\lvert S\right\rvert\) are normal (and independent) distributions {[}\protect\hyperlink{ref-papoulis1991}{21}{]}.
+\(\partial_\tau\left\lvert S\right\rvert\) are normal (and independent) distributions {[}\protect\hyperlink{ref-papoulis1991}{20}{]}.
 As it is customary, we chose as estimator for the location parameter \(x_0\) the median of \(X\)
 and for the scale parameter \(\gamma\) half the interquartile distance.
 
@@ -951,7 +947,7 @@ rejected the assumption that \(X\sim \mathrm{Cauchy}(x_0,\gamma)\),
 the fit is quite good according to the Kolmogorov-Smirnov statistic
 \(D_n=\sup_x\left\lvert F_n(x)-F_X(x)\right\rvert\). Here, \(F_X\) is the cumulative distribution function
 of \(X\) and \(F_n\) is the empirical distribution function
-evaluated over the chirpiness values {[}\protect\hyperlink{ref-asswad2021}{3}{]}.
+evaluated over the chirpiness values {[}\protect\hyperlink{ref-asswad2021}{2}{]}.
 
 \hypertarget{cortical-activations-in-a1}{%
 \subsection{Cortical activations in A1}\label{cortical-activations-in-a1}}
@@ -961,9 +957,9 @@ When hearing a sound signal \(s\), A1 receives its lift to the contact space \(L
 at every instant \(t\).
 The \emph{neuron} receives an external charge \(S(t,\omega)\) if \((t,\omega,\nu)\in\Sigma\) and no charge otherwise.
 
-The Wilson-Cowan equations (WC) {[}\protect\hyperlink{ref-wilson1972}{27}{]} have been successfully applied to describe
+The Wilson-Cowan equations (WC) {[}\protect\hyperlink{ref-wilson1972}{26}{]} have been successfully applied to describe
 the evolution of neural activations in V1 as well as A1
-{[}\protect\hyperlink{ref-bertalmio2018}{4},\protect\hyperlink{ref-boscain2017}{5},\protect\hyperlink{ref-bressloff2002a}{8},\protect\hyperlink{ref-ermentrout1979}{12},\protect\hyperlink{ref-loebel2007}{18},\protect\hyperlink{ref-rankin2015}{23},\protect\hyperlink{ref-zulfiqar2019}{29}{]}.
+{[}\protect\hyperlink{ref-bertalmio2018}{3},\protect\hyperlink{ref-boscain2017}{4},\protect\hyperlink{ref-bressloff2002a}{7},\protect\hyperlink{ref-ermentrout1979}{11},\protect\hyperlink{ref-loebel2007}{17},\protect\hyperlink{ref-rankin2015}{22},\protect\hyperlink{ref-zulfiqar2019}{28}{]}.
 
 The WC equations have the advantage of being flexible as they can be applied independently
 of the underlying geometric structure, which is only encoded inthe kernel of the integral term.
@@ -1001,7 +997,7 @@ a(t,\omega,\nu) = \int_0^t e^{-\alpha(s-t)}L(t,\omega,\nu)\mathrm{d}s
 \end{equation}
 
 With \(\gamma\neq0\), a non-linear delayed interaction term is added on top
-of the low-pass filter, encoding the inhibitory and excitatory interconnections between neurons {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+of the low-pass filter, encoding the inhibitory and excitatory interconnections between neurons {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 In the scope of the internship, no work was carried on the integral kernel.
 Hence, no further explanation on the WC model is needed.
@@ -1014,7 +1010,7 @@ Hence, no further explanation on the WC model is needed.
 Julia is a relatively new language, it first appeared in 2012,
 and its version 1.0 was released in 2018.
 The language was built to be fast, general-purpose, dynamic,
-and highly technical {[}\protect\hyperlink{ref-julia2018}{2}{]}.
+and highly technical {[}\protect\hyperlink{ref-julia2018}{1}{]}.
 
 Julia respresents a great alternative for scientific computing
 and visualization to replace C/C++, Fortran, Python, Matlab, and R.
@@ -1027,7 +1023,7 @@ However, the Julia community is still considerabely smaller
 than other scientific programming languages.
 For instance, in the 2021 Stack Overflow Developer Survey,
 1.29\% responded they wanted to work in Julia over the next year
-against 48.24\% in Python and 4.66\% in Matlab {[}\protect\hyperlink{ref-so_survey2021}{30}{]}.
+against 48.24\% in Python and 4.66\% in Matlab {[}\protect\hyperlink{ref-so_survey2021}{29}{]}.
 As a result, Julia has less stable scientific libraries than
 other languages.
 
@@ -1062,7 +1058,7 @@ Furthermore, an inverse STFT implementation is missing from the Julia
 standard libraries such as \href{https://juliapackages.com/p/fftw}{\texttt{FFTW.jl}}
 and \href{https://juliapackages.com/p/dsp}{\texttt{DSP.jl}}.
 Hence, I researched efficient algorithms for implementing the inverse STFT
-and landed on the Griffin-Lim algorithm {[}\protect\hyperlink{ref-griffin1983}{13}{]}.
+and landed on the Griffin-Lim algorithm {[}\protect\hyperlink{ref-griffin1983}{12}{]}.
 
 \begin{figure}
 \centering
@@ -1153,7 +1149,7 @@ As a reconstruction metric we present both the norm \(\left\lVert\cdot\right\rVe
 where for a real signal \(s\), \(\left\lVert s\right\rVert = \left\lVert s\right\rVert_1/\dim(s)\)
 with \(\left\lVert\cdot\right\rVert_1\) as the \(L_1\) norm
 and the standard deviation \(\mathrm{std}(\tilde s_\varepsilon -\tilde s)\).
-We observe that according to both metrics the algorithm indeed improves the signal {[}\protect\hyperlink{ref-asswad2021}{3}{]}.
+We observe that according to both metrics the algorithm indeed improves the signal {[}\protect\hyperlink{ref-asswad2021}{2}{]}.
 
 \pagebreak
 
@@ -1185,7 +1181,7 @@ in order to continue working on this fascinating project.
 
 The promising results obtained on simple synthetic sounds,
 suggested possible applications of the model to the problem
-of degraded speech {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+of degraded speech {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 The tests on noisy speech were also promising.
 However, the tests on cut sound signals were not as impressive.
 We were prompted to rethink the lift procedure.
@@ -1211,7 +1207,6 @@ This presents three main drawbacks:
   and then to ``lift'' it.
   This is not satisfactory from a computational point of view, where one would like to have
   a streamlined procedure that yield the input \(L\) directly from the original signal.
-  \textbackslash{}end\{itemize\}
 \end{itemize}
 
 To improve the model, it is crucial to devise a novel lift procedure allowing to bypass these problems.
@@ -1227,13 +1222,13 @@ To improve the model, it is crucial to devise a novel lift procedure allowing to
 
 Taking the V1 models as inspiration, it is interesting to apply wavelet analysis techniques
 in order to construct a reasonable structure for the A1 receptive fields,
-respecting the symmetries that have already been identified in {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+respecting the symmetries that have already been identified in {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 This work should be deeply connected with important signal processing concepts,
-usually applied to the analysis of radar signals {[}\protect\hyperlink{ref-mann1992}{19}{]}.
+usually applied to the analysis of radar signals {[}\protect\hyperlink{ref-mann1992}{18}{]}.
 
 We started reading state-of-the-art literature on the neurophysiology of the inner ear,
 it was clear that a Wavelet transform represents the signal processing
-in the cochlea than the STFT transform {[}\protect\hyperlink{ref-reimann2011}{24},\protect\hyperlink{ref-yang1992}{28}{]}.
+in the cochlea than the STFT transform {[}\protect\hyperlink{ref-reimann2011}{23},\protect\hyperlink{ref-yang1992}{27}{]}.
 
 The Wavelet Transform (WT) of a realizable signal \(s\in L^2(\mathbb{R})\) along
 a wavelet \(\psi\in L^2(\mathbb{R})\) is defined by
@@ -1249,7 +1244,7 @@ increases for higher frequencies in the WT.
 \begin{figure}
 \centering
 \includegraphics{img/stft_vs_wt.jpg}
-\caption{Time resolution in the STFT and the WT {[}\protect\hyperlink{ref-stft_vs_wt}{10}{]}}
+\caption{Time resolution in the STFT and the WT {[}\protect\hyperlink{ref-stft_vs_wt}{9}{]}}
 \end{figure}
 
 Nevertheless, the WT is given in function of time \(t\) and the dilation variable \(a\).
@@ -1332,16 +1327,12 @@ a preliminary study of the image reconstruction was needed
 in order to understand the sound model and the challenges that are
 faced in adapting the initial model for sound reconstruction.
 This triggered learning new mathematical concepts.
-I did a general reading of \emph{A Comprehensive Introduction to Sub-Riemannian Geometry}
-by Andrei Agrachev, Davide Barilari, and Ugo Boscain {[}\protect\hyperlink{ref-subriemannian}{1}{]}.
-This reading allowed me to understand the context of sub-Riemannian geometry
-which has applications in control theory and PDEs.
-The second book I perused was \emph{Foundations of Time-Frequency Analysis} by Gröchenig {[}\protect\hyperlink{ref-grochenig2001}{14}{]}
+I did a general reading of \emph{Foundations of Time-Frequency Analysis} by Gröchenig {[}\protect\hyperlink{ref-grochenig2001}{13}{]}
 which served as a reference throughout the internship.
 While I had a working understanding of basic Fourier analysis thanks to INSA courses
 and a familiarity of the Uncertainty Principle and the Short-Time Fourier Transform
 thanks to my work on music information retreival for my final Master's project.
-The book explains these principles regourously and also serves as a great source
+The book explains these principles rigourously and also serves as a great source
 for learning about the Heisenberg Group and Wavelet Transforms which are the basis
 of the proposed model.
 
@@ -1388,98 +1379,95 @@ I cultivated at INSA Rouen Normandie, to pursue a PhD in these domains.
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-subriemannian}{}%
-{[}1{]} Andrei Agrachev, Davide Barilari, and Ugo Boscain. 2019. A Comprehensive Introduction to Sub-Riemannian Geometry. \emph{Cambridge Core}. DOI:\url{https://doi.org/10.1017/9781108677325}
-
 \leavevmode\hypertarget{ref-julia2018}{}%
-{[}2{]} Viral Shah al Stefan Karpinski. Announcing the release of Julia 1.0. Retrieved August 17, 2021 from \url{https://julialang.org/blog/2018/08/one-point-zero/}
+{[}1{]} Viral Shah al Stefan Karpinski. Announcing the release of Julia 1.0. Retrieved August 17, 2021 from \url{https://julialang.org/blog/2018/08/one-point-zero/}
 
 \leavevmode\hypertarget{ref-asswad2021}{}%
-{[}3{]} Rand Asswad, Ugo Boscain, Giuseppina Turco, Dario Prandi, and Ludovic Sacchelli. 2021. An Auditory Cortex Model for Sound Processing.. 56--64. DOI:\url{https://doi.org/10.1007/978-3-030-80209-7_7}
+{[}2{]} Rand Asswad, Ugo Boscain, Giuseppina Turco, Dario Prandi, and Ludovic Sacchelli. 2021. An Auditory Cortex Model for Sound Processing.. 56--64. DOI:\url{https://doi.org/10.1007/978-3-030-80209-7_7}
 
 \leavevmode\hypertarget{ref-bertalmio2018}{}%
-{[}4{]} Marcelo Bertalmío, Luca Calatroni, Valentina Franceschi, Benedetta Franceschiello, and Dario Prandi. 2018. A cortical-inspired model for orientation-dependent contrast perception: A link with Wilson-Cowan equations. \emph{arXiv:1812.07425 {[}cs{]}} (December 2018). Retrieved November 12, 2020 from \url{http://arxiv.org/abs/1812.07425}
+{[}3{]} Marcelo Bertalmío, Luca Calatroni, Valentina Franceschi, Benedetta Franceschiello, and Dario Prandi. 2018. A cortical-inspired model for orientation-dependent contrast perception: A link with Wilson-Cowan equations. \emph{arXiv:1812.07425 {[}cs{]}} (December 2018). Retrieved November 12, 2020 from \url{http://arxiv.org/abs/1812.07425}
 
 \leavevmode\hypertarget{ref-boscain2017}{}%
-{[}5{]} Ugo Boscain, Roman Chertovskih, Jean-Paul Gauthier, Dario Prandi, and Alexey Remizov. 2017. Cortical-inspired image reconstruction via sub-Riemannian geometry and hypoelliptic diffusion. In \emph{SMAI 2017 - 8e Biennale Française des Mathématiques Appliquées et Industrielles}, La Tremblade, France, 37--53. DOI:\url{https://doi.org/10.1051/proc/201864037}
+{[}4{]} Ugo Boscain, Roman Chertovskih, Jean-Paul Gauthier, Dario Prandi, and Alexey Remizov. 2017. Cortical-inspired image reconstruction via sub-Riemannian geometry and hypoelliptic diffusion. In \emph{SMAI 2017 - 8e Biennale Française des Mathématiques Appliquées et Industrielles}, La Tremblade, France, 37--53. DOI:\url{https://doi.org/10.1051/proc/201864037}
 
 \leavevmode\hypertarget{ref-boscain2021}{}%
-{[}6{]} Ugo Boscain, Dario Prandi, Ludovic Sacchelli, and Giuseppina Turco. 2021. A bio-inspired geometric model for sound reconstruction. \emph{The Journal of Mathematical Neuroscience} 11, 1 (January 2021), 2. DOI:\url{https://doi.org/10.1186/s13408-020-00099-4}
+{[}5{]} Ugo Boscain, Dario Prandi, Ludovic Sacchelli, and Giuseppina Turco. 2021. A bio-inspired geometric model for sound reconstruction. \emph{The Journal of Mathematical Neuroscience} 11, 1 (January 2021), 2. DOI:\url{https://doi.org/10.1186/s13408-020-00099-4}
 
 \leavevmode\hypertarget{ref-bressloff2002}{}%
-{[}7{]} Paul C. Bressloff and Jack D. Cowan. 2002. An Amplitude Equation Approach to Contextual Effects in Visual Cortex. \emph{Neural Computation} 14, 3 (March 2002), 493--525. DOI:\url{https://doi.org/10.1162/089976602317250870}
+{[}6{]} Paul C. Bressloff and Jack D. Cowan. 2002. An Amplitude Equation Approach to Contextual Effects in Visual Cortex. \emph{Neural Computation} 14, 3 (March 2002), 493--525. DOI:\url{https://doi.org/10.1162/089976602317250870}
 
 \leavevmode\hypertarget{ref-bressloff2002a}{}%
-{[}8{]} Paul C. Bressloff, Jack D. Cowan, Martin Golubitsky, Peter J. Thomas, and Matthew C. Wiener. 2002. What Geometric Visual Hallucinations Tell Us about the Visual Cortex. \emph{Neural Computation} 14, 3 (March 2002), 473--491. DOI:\url{https://doi.org/10.1162/089976602317250861}
+{[}7{]} Paul C. Bressloff, Jack D. Cowan, Martin Golubitsky, Peter J. Thomas, and Matthew C. Wiener. 2002. What Geometric Visual Hallucinations Tell Us about the Visual Cortex. \emph{Neural Computation} 14, 3 (March 2002), 473--491. DOI:\url{https://doi.org/10.1162/089976602317250861}
 
 \leavevmode\hypertarget{ref-citti2006}{}%
-{[}9{]} G. Citti and A. Sarti. 2006. A Cortical Based Model of Perceptual Completion in the Roto-Translation Space. \emph{Journal of Mathematical Imaging and Vision} 24, 3 (May 2006), 307--326. DOI:\url{https://doi.org/10.1007/s10851-005-3630-2}
+{[}8{]} G. Citti and A. Sarti. 2006. A Cortical Based Model of Perceptual Completion in the Roto-Translation Space. \emph{Journal of Mathematical Imaging and Vision} 24, 3 (May 2006), 307--326. DOI:\url{https://doi.org/10.1007/s10851-005-3630-2}
 
 \leavevmode\hypertarget{ref-stft_vs_wt}{}%
-{[}10{]} Wikimedia Commons. 2013. Resolution difference between the Short-Time Fourier Transform and the Wavelet Transform. Retrieved September 9, 2021 from \url{https://commons.wikimedia.org/wiki/File:STFT_and_WT.jpg}
+{[}9{]} Wikimedia Commons. 2013. Resolution difference between the Short-Time Fourier Transform and the Wavelet Transform. Retrieved September 9, 2021 from \url{https://commons.wikimedia.org/wiki/File:STFT_and_WT.jpg}
 
 \leavevmode\hypertarget{ref-dallos1996}{}%
-{[}11{]} P. Dallos. 1996. Overview: Cochlear Neurobiology: Springer Handbook of Auditory Research. \emph{The Cochlea: Springer Handbook of Auditory Research} (1996), 1--43. Retrieved August 13, 2021 from \url{https://www.scholars.northwestern.edu/en/publications/overview-cochlear-neurobiology-springer-handbook-of-auditory-rese}
+{[}10{]} P. Dallos. 1996. Overview: Cochlear Neurobiology: Springer Handbook of Auditory Research. \emph{The Cochlea: Springer Handbook of Auditory Research} (1996), 1--43. Retrieved August 13, 2021 from \url{https://www.scholars.northwestern.edu/en/publications/overview-cochlear-neurobiology-springer-handbook-of-auditory-rese}
 
 \leavevmode\hypertarget{ref-ermentrout1979}{}%
-{[}12{]} G. B. Ermentrout and J. D. Cowan. 1979. A mathematical theory of visual hallucination patterns. \emph{Biological Cybernetics} 34, 3 (October 1979), 137--150. DOI:\url{https://doi.org/10.1007/BF00336965}
+{[}11{]} G. B. Ermentrout and J. D. Cowan. 1979. A mathematical theory of visual hallucination patterns. \emph{Biological Cybernetics} 34, 3 (October 1979), 137--150. DOI:\url{https://doi.org/10.1007/BF00336965}
 
 \leavevmode\hypertarget{ref-griffin1983}{}%
-{[}13{]} D. Griffin and Jae S. Lim. 1983. Signal estimation from modified short-time Fourier transform. \emph{undefined} (1983). Retrieved September 3, 2021 from \url{https://www.semanticscholar.org/paper/Signal-estimation-from-modified-short-time-Fourier-Griffin-Lim/14bc876fae55faf5669beb01667a4f3bd324a4f1}
+{[}12{]} D. Griffin and Jae S. Lim. 1983. Signal estimation from modified short-time Fourier transform. \emph{undefined} (1983). Retrieved September 3, 2021 from \url{https://www.semanticscholar.org/paper/Signal-estimation-from-modified-short-time-Fourier-Griffin-Lim/14bc876fae55faf5669beb01667a4f3bd324a4f1}
 
 \leavevmode\hypertarget{ref-grochenig2001}{}%
-{[}14{]} Karlheinz Gröchenig. 2001. \emph{Foundations of Time-Frequency Analysis}. Birkhäuser Basel. DOI:\url{https://doi.org/10.1007/978-1-4612-0003-1}
+{[}13{]} Karlheinz Gröchenig. 2001. \emph{Foundations of Time-Frequency Analysis}. Birkhäuser Basel. DOI:\url{https://doi.org/10.1007/978-1-4612-0003-1}
 
 \leavevmode\hypertarget{ref-heinzel2002}{}%
-{[}15{]} Gerhard Heinzel, Albrecht Rüdiger, and Roland Schilling. 2002. Spectrum and spectral density estimation by the Discrete Fourier transform (DFT), including a comprehensive list of window functions and some new at-top windows. (2002). Retrieved September 9, 2021 from \url{https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_152164}
+{[}14{]} Gerhard Heinzel, Albrecht Rüdiger, and Roland Schilling. 2002. Spectrum and spectral density estimation by the Discrete Fourier transform (DFT), including a comprehensive list of window functions and some new at-top windows. (2002). Retrieved September 9, 2021 from \url{https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_152164}
 
 \leavevmode\hypertarget{ref-hoffman1989}{}%
-{[}16{]} William C. Hoffman. 1989. The visual cortex is a contact bundle. \emph{Applied Mathematics and Computation} 32, 2 (August 1989), 137--167. DOI:\url{https://doi.org/10.1016/0096-3003(89)90091-X}
+{[}15{]} William C. Hoffman. 1989. The visual cortex is a contact bundle. \emph{Applied Mathematics and Computation} 32, 2 (August 1989), 137--167. DOI:\url{https://doi.org/10.1016/0096-3003(89)90091-X}
 
 \leavevmode\hypertarget{ref-hubel1959}{}%
-{[}17{]} D. H. Hubel and T. N. Wiesel. 1959. Receptive fields of single neurones in the cat's striate cortex. \emph{The Journal of Physiology} 148, 3 (1959), 574--591. DOI:\url{https://doi.org/10.1113/jphysiol.1959.sp006308}
+{[}16{]} D. H. Hubel and T. N. Wiesel. 1959. Receptive fields of single neurones in the cat's striate cortex. \emph{The Journal of Physiology} 148, 3 (1959), 574--591. DOI:\url{https://doi.org/10.1113/jphysiol.1959.sp006308}
 
 \leavevmode\hypertarget{ref-loebel2007}{}%
-{[}18{]} Alex Loebel, Israel Nelken, and Misha Tsodyks. 2007. Processing of sounds by population spikes in a model of primary auditory cortex. \emph{Frontiers in Neuroscience} 1, 1 (November 2007), 197--209. DOI:\url{https://doi.org/10.3389/neuro.01.1.1.015.2007}
+{[}17{]} Alex Loebel, Israel Nelken, and Misha Tsodyks. 2007. Processing of sounds by population spikes in a model of primary auditory cortex. \emph{Frontiers in Neuroscience} 1, 1 (November 2007), 197--209. DOI:\url{https://doi.org/10.3389/neuro.01.1.1.015.2007}
 
 \leavevmode\hypertarget{ref-mann1992}{}%
-{[}19{]} S. Mann and S. Haykin. 1992. 'Chirplets' and 'warblets': Novel time-frequency methods. \emph{Electronics Letters} 28, (January 1992), 114. DOI:\url{https://doi.org/10.1049/el:19920070}
+{[}18{]} S. Mann and S. Haykin. 1992. 'Chirplets' and 'warblets': Novel time-frequency methods. \emph{Electronics Letters} 28, (January 1992), 114. DOI:\url{https://doi.org/10.1049/el:19920070}
 
 \leavevmode\hypertarget{ref-muller2015}{}%
-{[}20{]} Meinard Müller. 2015. \emph{Fundamentals of Music Processing - Audio, Analysis, Algorithms, Applications}. Springer. Retrieved from \url{https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP}
+{[}19{]} Meinard Müller. 2015. \emph{Fundamentals of Music Processing - Audio, Analysis, Algorithms, Applications}. Springer. Retrieved from \url{https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP}
 
 \leavevmode\hypertarget{ref-papoulis1991}{}%
-{[}21{]} Athanasios Papoulis. 1991. \emph{Probability, random variables and stochastic processes} (3rd ed.). McGraw-Hill Companies.
+{[}20{]} Athanasios Papoulis. 1991. \emph{Probability, random variables and stochastic processes} (3rd ed.). McGraw-Hill Companies.
 
 \leavevmode\hypertarget{ref-petitot1999}{}%
-{[}22{]} Jean Petitot and Yannick Tondut. 1999. Vers une neurogéométrie. Fibrations corticales, structures de contact et contours subjectifs modaux. \emph{Mathématiques et Sciences Humaines} 145, (1999), 5--101. Retrieved August 13, 2021 from \url{https://eudml.org/doc/94522}
+{[}21{]} Jean Petitot and Yannick Tondut. 1999. Vers une neurogéométrie. Fibrations corticales, structures de contact et contours subjectifs modaux. \emph{Mathématiques et Sciences Humaines} 145, (1999), 5--101. Retrieved August 13, 2021 from \url{https://eudml.org/doc/94522}
 
 \leavevmode\hypertarget{ref-rankin2015}{}%
-{[}23{]} James Rankin, Elyse Sussman, and John Rinzel. 2015. Neuromechanistic Model of Auditory Bistability. \emph{PLoS computational biology} 11, 11 (November 2015), e1004555. DOI:\url{https://doi.org/10.1371/journal.pcbi.1004555}
+{[}22{]} James Rankin, Elyse Sussman, and John Rinzel. 2015. Neuromechanistic Model of Auditory Bistability. \emph{PLoS computational biology} 11, 11 (November 2015), e1004555. DOI:\url{https://doi.org/10.1371/journal.pcbi.1004555}
 
 \leavevmode\hypertarget{ref-reimann2011}{}%
-{[}24{]} Hans Martin Reimann. 2011. Signal processing in the cochlea: The structure equations. \emph{The Journal of Mathematical Neuroscience} 1, 1 (June 2011), 5. DOI:\url{https://doi.org/10.1186/2190-8567-1-5}
+{[}23{]} Hans Martin Reimann. 2011. Signal processing in the cochlea: The structure equations. \emph{The Journal of Mathematical Neuroscience} 1, 1 (June 2011), 5. DOI:\url{https://doi.org/10.1186/2190-8567-1-5}
 
 \leavevmode\hypertarget{ref-roads2002}{}%
-{[}25{]} Curtis Roads. 2002. Microsound. (March 2002). DOI:\url{https://doi.org/10.7551/mitpress/4601.001.0001}
+{[}24{]} Curtis Roads. 2002. Microsound. (March 2002). DOI:\url{https://doi.org/10.7551/mitpress/4601.001.0001}
 
 \leavevmode\hypertarget{ref-sen2014}{}%
-{[}26{]} Debashis Sen. 2014. The uncertainty relations in quantum mechanics. \emph{Current science} 107, (July 2014), 203--218. DOI:\url{https://doi.org/10.13140/2.1.5183.0406}
+{[}25{]} Debashis Sen. 2014. The uncertainty relations in quantum mechanics. \emph{Current science} 107, (July 2014), 203--218. DOI:\url{https://doi.org/10.13140/2.1.5183.0406}
 
 \leavevmode\hypertarget{ref-wilson1972}{}%
-{[}27{]} Hugh R. Wilson and Jack D. Cowan. 1972. Excitatory and Inhibitory Interactions in Localized Populations of Model Neurons. \emph{Biophysical Journal} 12, 1 (January 1972), 1--24. DOI:\url{https://doi.org/10.1016/S0006-3495(72)86068-5}
+{[}26{]} Hugh R. Wilson and Jack D. Cowan. 1972. Excitatory and Inhibitory Interactions in Localized Populations of Model Neurons. \emph{Biophysical Journal} 12, 1 (January 1972), 1--24. DOI:\url{https://doi.org/10.1016/S0006-3495(72)86068-5}
 
 \leavevmode\hypertarget{ref-yang1992}{}%
-{[}28{]} Xiaowei Yang, Kuansan Wang, and Shihab Shamma. 1992. Auditory representations of acoustic signals. \emph{Information Theory, IEEE Transactions on} 38, (April 1992), 824--839. DOI:\url{https://doi.org/10.1109/18.119739}
+{[}27{]} Xiaowei Yang, Kuansan Wang, and Shihab Shamma. 1992. Auditory representations of acoustic signals. \emph{Information Theory, IEEE Transactions on} 38, (April 1992), 824--839. DOI:\url{https://doi.org/10.1109/18.119739}
 
 \leavevmode\hypertarget{ref-zulfiqar2019}{}%
-{[}29{]} Isma Zulfiqar, Michelle Moerel, and Elia Formisano. 2019. Spectro-Temporal Processing in a Two-Stream Computational Model of Auditory Cortex. \emph{Frontiers in Computational Neuroscience} 13, (2019), 95. DOI:\url{https://doi.org/10.3389/fncom.2019.00095}
+{[}28{]} Isma Zulfiqar, Michelle Moerel, and Elia Formisano. 2019. Spectro-Temporal Processing in a Two-Stream Computational Model of Auditory Cortex. \emph{Frontiers in Computational Neuroscience} 13, (2019), 95. DOI:\url{https://doi.org/10.3389/fncom.2019.00095}
 
 \leavevmode\hypertarget{ref-so_survey2021}{}%
-{[}30{]} 2021. Stack Overflow Developer Survey 2021. Retrieved from \url{https://insights.stackoverflow.com/survey/2021\#section-most-popular-technologies-programming-scripting-and-markup-languages}
+{[}29{]} 2021. Stack Overflow Developer Survey 2021. Retrieved from \url{https://insights.stackoverflow.com/survey/2021\#section-most-popular-technologies-programming-scripting-and-markup-languages}
 
 \leavevmode\hypertarget{ref-l2s}{}%
-{[}31{]} Laboratory of signals and systems L2S Paris-Saclay University. Retrieved July 29, 2021 from \url{https://l2s.centralesupelec.fr/}
+{[}30{]} Laboratory of signals and systems L2S Paris-Saclay University. Retrieved July 29, 2021 from \url{https://l2s.centralesupelec.fr/}
 
 \pagebreak
 
@@ -1548,15 +1536,15 @@ Since $V_w s\in L^2(\mathbb{R}^2)$, let $\tilde s\in L^2(\mathbb{R})$ be defined
 \end{equation}
 We therefore have, for all $\varphi\in L^2(\mathbb{R})$, using Parseval's formula
 \begin{align}
-\left\langle\tilde s, \varphi\right\rangle_{L^2(\mathbb{R}}
+\left\langle\tilde s, \varphi\right\rangle_{L^2(\mathbb{R})}
 &= \frac{1}{\left\langle w,h\right\rangle} \iint_{\mathbb{R}^2} V_w s(\tau,\omega) \left\langle M_\omega T_\tau h, \varphi\right\rangle_{L^2(\mathbb{R})} \mathrm{d}\omega\mathrm{d}\tau\\
 &= \frac{1}{\left\langle w,h\right\rangle} \iint_{\mathbb{R}^2} V_w s(\tau,\omega) \overline{\left\langle\varphi,M_\omega T_\tau h\right\rangle}_{L^2(\mathbb{R})} \mathrm{d}\omega\mathrm{d}\tau\\
 &= \frac{1}{\left\langle w,h\right\rangle} \iint_{\mathbb{R}^2} V_w s(\tau,\omega) \overline{V_h \varphi(\tau,\omega)} \mathrm{d}\omega\mathrm{d}\tau\\
-&= \frac{1}{\left\langle w,h\right\rangle} \left\langle V_w s, V_h \varphi\right\rangle_{L^2(\mathbb{R}^2}\\
-&= \left\langle s, \varphi\right\rangle_{L^2(\mathbb{R}}
+&= \frac{1}{\left\langle w,h\right\rangle} \left\langle V_w s, V_h \varphi\right\rangle_{L^2(\mathbb{R}^2)}\\
+&= \left\langle s, \varphi\right\rangle_{L^2(\mathbb{R})}
 \end{align}
 
-Since $\left\langle\tilde s,\varphi\right\rangle_{L^2(\mathbb{R}}=\left\langle s,\varphi\right\rangle_{L^2(\mathbb{R}},\forall\varphi\in L^2(\mathbb{R})$
+Since $\left\langle\tilde s,\varphi\right\rangle_{L^2(\mathbb{R})}=\left\langle s,\varphi\right\rangle_{L^2(\mathbb{R})},\forall\varphi\in L^2(\mathbb{R})$
 then in the weak sense $\tilde s = s$.
 \end{proof}
 
@@ -1608,7 +1596,7 @@ U(\tau,\omega,\lambda) = e^{-2\pi i\lambda}T_\tau M_\omega
 \end{equation}
 
 Therefore, the operator algebra generated by the unitary time and frequency shift
-operators coincides with the Heisenberg group \(\mathbb{H}^1\) {[}\protect\hyperlink{ref-boscain2021}{6}{]}.
+operators coincides with the Heisenberg group \(\mathbb{H}^1\) {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \hypertarget{introducing-the-chirpiness-to-the-heisenberg-group}{%
 \subsection{Introducing the chirpiness to the Heisenberg group}\label{introducing-the-chirpiness-to-the-heisenberg-group}}
