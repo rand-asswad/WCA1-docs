@@ -3,5 +3,11 @@ site: "bookdown::bookdown_site"
 delete_merged_file: true
 rmd_files:
   - main.rmd
-  - parts/0_intro.md
+  - parts/0_pre_intro.md
+  - parts/1_intro.md
+  - parts/2_WCV1.md
+  - parts/3_WCA1.md
+  - parts/4_implementation.md
+  - parts/5_conclusion.md
+  - parts/6_appendix.md
 output_dir: _out

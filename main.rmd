@@ -1,19 +1,14 @@
 ---
 title: A bio-inspired geometric model for sound reconstruction
-subtitle: Masters Thesis Project
+subtitle: Master's Thesis
 author: Rand ASSWAD
 lang: en-US
 bibliography: ref.bib
-biblio-style: apalike
+csl: include/association-for-computing-machinery.xml
 link-citations: true
-date: September 2021
+date: 04/01/2021 - 30/06/2021
 github-repo: rand-asswad/WCA1-docs
-cover-image: img/cover_img.png
 ---
-
-```{r cover, fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('img/cover_img.png', dpi = NA)
-```
 
 ```{r setup, include=FALSE}
 library(knitr)
@@ -24,6 +19,7 @@ opts_knit$set(root.dir = proj)
 
 # set chunk options
 opts_chunk$set(fig.pos = 'H')
+opts_chunk$set(fig.align = "center")
 opts_chunk$set(comment = NA)
 opts_chunk$set(include = TRUE, eval = TRUE)
 opts_chunk$set(cache = FALSE)

@@ -3,11 +3,27 @@
 \def\N{\mathbb{N}}
 \def\Z{\mathbb{Z}}
 
-\def\x{\tilde{x}}
-\def\w{\omega}
-\def\phi{\varphi}
+\def\Cl{\mathcal{C}}
+\def\U{\mathcal{U}}
+\def\H{\mathbb{H}}
 
+\def\w{\omega}
+\let\aphi\phi
+\def\phi{\varphi}
+\def\epsilon{\varepsilon}
+
+\def\numin{\nu_{\min}}
+\def\numax{\nu_{\max}}
+
+\def\ddt{\frac{\mathrm{d}}{\mathrm{d}t}}
+\def\dx{\mathrm{d}x}
 \def\dt{\mathrm{d}t}
+\def\ds{\mathrm{d}s}
+\def\dtau{\mathrm{d}\tau}
+\def\dw{\mathrm{d}\w}
+\def\dnu{\mathrm{d}\nu}
+\def\dtheta{\mathrm{d}\theta}
+\def\dtfrac{\frac{\partial}{\partial t}}
 
 \def\pp#1{\left(#1\right)}
 \def\sset#1{\left\{#1\right\}}
@@ -15,9 +31,15 @@
 
 \def\abs #1{\left\lvert#1\right\rvert}
 \def\norm#1{\left\lVert#1\right\rVert}
-\def\dotp#1#2{\left\langle#1{;}#2\right\rangle}
+\def\dotp#1{\left\langle#1\right\rangle}
+\def\round#1{\left\lfloor#1\right\rceil}
+
+\def\bbar#1{\overline{#1}}
 
 \def\pmat#1{\begin{pmatrix}#1\end{pmatrix}}
+\def\hmat#1#2{\pmat{#1 & #2\\0 & 1}}
+
+\def\Aut{\mathrm{Aut}}
 
 \def\qtext#1{\quad\text{#1}\quad}
 
@@ -27,15 +49,8 @@
 
 \def\transp#1{{#1}^{\top}}
 
+\def\stft #1{\mathrm{STFT}\sset{#1}}
+\def\STFT{\mathrm{STFT}}
+\def\Proj{\mathrm{Proj}}
 
-\def\f{\boldsymbol{f}}
-\def\ff{\f\hspace{-2pt}\f}
-\def\mf{\boldsymbol{mf}}
-\def\mp{\boldsymbol{mp}}
-\def\p{\boldsymbol{p}}
-\def\piu{pi\grave{u}~}
-
-\def\X{\boldsymbol{X}}
-\def\V{\boldsymbol{V}}
-\def\W{\boldsymbol{W}}
-\def\H{\boldsymbol{H}}
+\def\Cd{\mathrm{Cauchy}}

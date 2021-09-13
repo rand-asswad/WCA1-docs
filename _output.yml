@@ -8,6 +8,7 @@ bookdown::pdf_book:
   includes:
     in_header: include/preambule.tex
     before_body: include/cover.tex
+#  pandoc_args: [--top-level-division=chapter, --wrap=none]
 bookdown::gitbook:
   split_by: rmd
   css: include/gitbook.css
