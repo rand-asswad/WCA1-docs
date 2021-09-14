@@ -8,9 +8,9 @@
 \contentsline {subsection}{\numberline {2.2}Wilson-Cowan model in V1}{4}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Sound reconstruction model}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}From V1 to A1}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Sound reconstruction pipeline}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Sound reconstruction pipeline}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Time-Frequency representation}{6}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}The Short-Time Fourier Transform}{6}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1}The Short-Time Fourier Transform}{7}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Time and frequency shifts operators}{7}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Discrete STFT}{7}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}STFT windowing}{8}{subsubsection.3.3.4}%

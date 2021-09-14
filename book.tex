@@ -1229,6 +1229,9 @@ usually applied to the analysis of radar signals {[}\protect\hyperlink{ref-mann1
 We started reading state-of-the-art literature on the neurophysiology of the inner ear,
 it was clear that a Wavelet transform represents the signal processing
 in the cochlea than the STFT transform {[}\protect\hyperlink{ref-reimann2011}{23},\protect\hyperlink{ref-yang1992}{27}{]}.
+It is worth mentioning that we studied extensively the auditory representation
+of acoustic signals by Yang, Wang, and Shamma {[}\protect\hyperlink{ref-yang1992}{27}{]} in order
+to rethink the model of sound processing in the cochlea.
 
 The Wavelet Transform (WT) of a realizable signal \(s\in L^2(\mathbb{R})\) along
 a wavelet \(\psi\in L^2(\mathbb{R})\) is defined by
@@ -1584,10 +1587,19 @@ Which implies that \(\ell\) defines a unique function \(f\in L^2(\mathbb{R})\) s
 \subsection{Heisenberg group action on the contact space}\label{heisenberg-group-action-on-the-contact-space}}
 
 We consider the unitary shift operators \(T_\tau,M_\omega\in\mathcal{U}(L^2(\mathbb{R}))\).
-The commutation relation of these unitary operators \(\forall s\in L^2(\mathbb{R})\)
+The commutation relation of these unitary operators is given by
 \begin{equation}
-T_\tau M_\omega T_\tau^{-1} M_\omega^{-1} = e^{-2\pi i\omega\tau}s(t)
+T_\tau M_\omega T_\tau^{-1} M_\omega^{-1} = e^{-2\pi i\omega\tau} \mathrm{Id}
 \end{equation}
+
+Indeed, \(\forall s\in L^2(\mathbb{R})\)
+\begin{align}
+T_\tau M_\omega T_\tau^{-1} M_\omega^{-1} s(t)
+&= T_\tau M_\omega T_\tau^{-1} e^{-2\pi i\omega t} s(t)\\ 
+&= T_\tau M_\omega e^{-2\pi i\omega(t+\tau)} s(t+\tau)\\ 
+&= T_\tau e^{-2\pi i\omega\tau} s(t+\tau)\\ 
+&= e^{-2\pi i\omega\tau} s(t)
+\end{align}
 
 We also consider the representation \(U\) from the Heisenberg group \(\mathbb{H}^1\)
 defined \(U:\mathbb{H}^1\rightarrow\mathcal{U}(L^2(\mathbb{R}^2))\) by
@@ -1626,6 +1638,7 @@ H = \left\{\left.\begin{pmatrix}a & t\\0 & 1\end{pmatrix}\right\vert a\in\mathbb
 We denote \((a,t)\equiv \begin{pmatrix}a & t\\0 & 1\end{pmatrix}\in H\)
 
 We hence have \((a,t)(b,s)\equiv\begin{pmatrix}a & t\\0 & 1\end{pmatrix}\begin{pmatrix}b & s\\0 & 1\end{pmatrix}=\begin{pmatrix}ab & as+t\\0 & 1\end{pmatrix}\equiv(ab,as+t)\)
+
 In order to find \(\mathrm{Aut}(H)\) we need to define the group action \((H,\psi)\) that verifies (\ref{eq:aut_g})
 \begin{equation}\label{eq:aut_h}
 \psi((a,t)(b,s)) = \psi(a,t)\psi(b,s)
@@ -1648,8 +1661,5 @@ Hence allowing to redefine the augmented space of \((\nu,a,t)\)
 as the semidirect product \(G=\mathbb{R}\ltimes H\) with respect to \(\psi\in\mathrm{Aut}(H)\).
 Nevertheless, further work is needed in order to construct such space
 from the Wavelet time-frequency representation.
-
-\hypertarget{cochlea}{%
-\section{Sound signal processing in the cochlea}\label{cochlea}}
 
 \end{document}
