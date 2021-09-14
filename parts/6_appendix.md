@@ -109,10 +109,19 @@ $\dotp{f,\phi}_{L^2(\R)} = \ell(\phi),\forall\phi\in L^2(\R)$.
 ## Heisenberg group action on the contact space
 
 We consider the unitary shift operators $T_\tau,M_\w\in\U(L^2(\R))$.
-The commutation relation of these unitary operators $\forall s\in L^2(\R)$
+The commutation relation of these unitary operators is given by
 \begin{equation}
-T_\tau M_\w T_\tau^{-1} M_\w^{-1} = e^{-2\pi i\w\tau}s(t)
+T_\tau M_\w T_\tau^{-1} M_\w^{-1} = e^{-2\pi i\w\tau} \mathrm{Id}
 \end{equation}
+
+Indeed, $\forall s\in L^2(\R)$
+\begin{align}
+T_\tau M_\w T_\tau^{-1} M_\w^{-1} s(t)
+&= T_\tau M_\w T_\tau^{-1} e^{-2\pi i\w t} s(t)\\ 
+&= T_\tau M_\w e^{-2\pi i\w (t+\tau)} s(t+\tau)\\ 
+&= T_\tau e^{-2\pi i\w \tau} s(t+\tau)\\ 
+&= e^{-2\pi i\w\tau} s(t)
+\end{align}
 
 We also consider the representation $U$ from the Heisenberg group $\H^1$
 defined $U:\H^1\rightarrow\U(L^2(\R^2))$ by
@@ -150,6 +159,7 @@ H = \sset{\left.\hmat{a}{t}\right\vert a\in\R_+, t\in\R}
 We denote $(a,t)\equiv \hmat{a}{t}\in H$
 
 We hence have $(a,t)(b,s)\equiv\hmat{a}{t}\hmat{b}{s}=\hmat{ab}{as+t}\equiv(ab,as+t)$
+
 In order to find $\Aut(H)$ we need to define the group action $(H,\psi)$ that verifies (\ref{eq:aut_g})
 \begin{equation}\label{eq:aut_h}
 \psi((a,t)(b,s)) = \psi(a,t)\psi(b,s)
@@ -172,5 +182,3 @@ Hence allowing to redefine the augmented space of $(\nu,a,t)$
 as the semidirect product $G=\R\ltimes H$ with respect to $\psi\in\Aut(H)$.
 Nevertheless, further work is needed in order to construct such space
 from the Wavelet time-frequency representation.
-
-# Sound signal processing in the cochlea {#cochlea}

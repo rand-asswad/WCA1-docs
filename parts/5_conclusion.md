@@ -60,6 +60,9 @@ usually applied to the analysis of radar signals [@mann1992].
 We started reading state-of-the-art literature on the neurophysiology of the inner ear,
 it was clear that a Wavelet transform represents the signal processing
 in the cochlea than the STFT transform [@yang1992;@reimann2011].
+It is worth mentioning that we studied extensively the auditory representation
+of acoustic signals by Yang, Wang, and Shamma [@yang1992] in order
+to rethink the model of sound processing in the cochlea.
 
 The Wavelet Transform (WT) of a realizable signal $s\in L^2(\R)$ along
 a wavelet $\psi\in L^2(\R)$ is defined by
