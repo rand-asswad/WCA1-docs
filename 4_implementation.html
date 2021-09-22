@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A bio-inspired geometric model for sound reconstruction</title>
-  <meta name="description" content="A bio-inspired geometric model for sound reconstruction" />
+  <title>4 Implementation | A bio-inspired geometric model for sound reconstruction</title>
+  <meta name="description" content="4 Implementation | A bio-inspired geometric model for sound reconstruction" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A bio-inspired geometric model for sound reconstruction" />
+  <meta property="og:title" content="4 Implementation | A bio-inspired geometric model for sound reconstruction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rand-asswad/WCA1-docs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A bio-inspired geometric model for sound reconstruction" />
+  <meta name="twitter:title" content="4 Implementation | A bio-inspired geometric model for sound reconstruction" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="0_pre_intro.html"/>
+<link rel="prev" href="3_WCA1.html"/>
+<link rel="next" href="5_conclusion.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -150,36 +150,118 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">A bio-inspired geometric model for sound reconstruction</h1>
-<h2 class="subtitle"><em>Master’s Thesis</em></h2>
-<p class="author"><em>Rand ASSWAD</em></p>
-<p class="date"><em>04/01/2021 - 30/06/2021</em></p>
+<div id="implementation" class="section level1">
+<h1><span class="header-section-number">4</span> Implementation</h1>
+<p>Julia is a relatively new language, it first appeared in 2012,
+and its version 1.0 was released in 2018.
+The language was built to be fast, general-purpose, dynamic,
+and highly technical <span class="citation">[<a href="6_appendix.html#ref-julia2018">1</a>]</span>.</p>
+<p>Julia respresents a great alternative for scientific computing
+and visualization to replace C/C++, Fortran, Python, Matlab, and R.
+It is designed to have the speed of C and Fortran,
+with the ease of use of Python, Matlab, and R.
+All while maintaining a great syntax for general purpose programming.</p>
+<p>Julia is a serious contender as a scientific programming language.
+However, the Julia community is still considerabely smaller
+than other scientific programming languages.
+For instance, in the 2021 Stack Overflow Developer Survey,
+1.29% responded they wanted to work in Julia over the next year
+against 48.24% in Python and 4.66% in Matlab <span class="citation">[<a href="6_appendix.html#ref-so_survey2021">29</a>]</span>.
+As a result, Julia has less stable scientific libraries than
+other languages.</p>
+<div id="the-wca1.jl-library" class="section level2">
+<h2><span class="header-section-number">4.1</span> The <code>WCA1.jl</code> library</h2>
+<p>The model was first implemented by Dario Prandi,
+allowing to present a series of experiments on simple synthetic sounds.
+The code and the experiments are available at
+<a href="https://github.com/dprn/WCA1"><code>https://github.com/dprn/WCA1</code></a>.</p>
+<p>The work I carried on during the internship was built on top of the original code,
+my contributions are available at
+<a href="https://github.com/rand-asswad/WCA1"><code>https://github.com/rand-asswad/WCA1</code></a>,
+which is forked from the original repository.</p>
+<p>Indeed, rewriting the code was necessary in order to experiment
+on real sound signals as they are considerabely larger,
+otherwise the code would run for a long time and in some cases
+errors would arise.
+Moreover, an official scientific package should be well-written
+and well-documented, and should also try to respect Julia’s
+code style and recommendations.</p>
+<div id="the-stft-module" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> The STFT module</h3>
+<p>Reimplementing the STFT module was necessary in order to carry out
+experiments on real sound signals, the preexisting code was not well
+adapted for such signals.
+Furthermore, an inverse STFT implementation is missing from the Julia
+standard libraries such as <a href="https://juliapackages.com/p/fftw"><code>FFTW.jl</code></a>
+and <a href="https://juliapackages.com/p/dsp"><code>DSP.jl</code></a>.
+Hence, I researched efficient algorithms for implementing the inverse STFT
+and landed on the Griffin-Lim algorithm <span class="citation">[<a href="6_appendix.html#ref-griffin1983">12</a>]</span>.</p>
+<div class="figure">
+<img src="img/stft_istft.png" alt="Left: speech sound s compared with \tilde s=\mathrm{STFT}^{-1}\left\{\mathrm{STFT}\left\{s\right\}\right\}. Right: spectrogram \left\lvert S\right\rvert(\tau,\omega)=\left\lvert\mathrm{STFT}\left\{s(t)\right\}\right\rvert" />
+<p class="caption">Left: speech sound <span class="math inline">\(s\)</span> compared with <span class="math inline">\(\tilde s=\mathrm{STFT}^{-1}\left\{\mathrm{STFT}\left\{s\right\}\right\}\)</span>. Right: spectrogram <span class="math inline">\(\left\lvert S\right\rvert(\tau,\omega)=\left\lvert\mathrm{STFT}\left\{s(t)\right\}\right\rvert\)</span></p>
 </div>
+</div>
+<div id="optimizing-the-lift-module" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Optimizing the lift module</h3>
+<p>The sound chirpiness is computed by calculating gradient of the spectrum matrix <span class="math inline">\(\nabla\left\lvert S\right\rvert\)</span>,
+which gives the chirpiness with respect to each time-frequency pair</p>
+<p><span class="math display">\[\begin{equation}
+\nu[\tau,\omega] =
+\begin{cases}
+-\frac{\partial_\tau\left\lvert S\right\rvert[\tau,\omega]}{\partial_\omega\left\lvert S\right\rvert[\tau,\omega]} &amp; \text{if}~\left\lvert\partial_\omega\left\lvert S\right\rvert[\tau,\omega]\right\rvert&gt;\varepsilon\\
+0 &amp; \text{otherwise}
+\end{cases}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\varepsilon\)</span> is a small threshold.</p>
+<p>Afterwards, the chirpiness values are compared to a Cauchy distribution, allowing to establish
+a confidence interval <span class="math inline">\(I_p\)</span> (we take <span class="math inline">\(p=0.95\)</span>), in order to cut the tails that extend
+over the entire real line.</p>
+<p>The chirpiness values <span class="math inline">\(\nu\in I_p=[\nu_{\min},\nu_{\max}]\)</span> are then discretized as the following:
+Let <span class="math inline">\((\nu_n)_{1\leq n\leq N}\)</span> such that <span class="math inline">\(\nu_{\min}=\nu_1&lt;\cdots&lt;\nu_N=\nu_{\max}\)</span>.
+Each value <span class="math inline">\(\nu\)</span> is rounded to the nearest <span class="math inline">\(\nu_n\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+n(\nu) = \left\lfloor\frac{\nu - \nu_{\min}}{\nu_{\max}- \nu_{\min}}(N-1) + 1\right\rceil,\quad\forall\nu\in I_p
+\end{equation}\]</span>
+where <span class="math inline">\(\left\lfloor\cdot\right\rceil:\mathbb{R}\rightarrow\mathbb{Z}\)</span> is the rounding function to the nearest integer.</p>
+<p>This was optimized by implementing the function in a variety of ways,
+then benchmarking the time and memory consumption for each implementation
+over every sample sound from the speech library.
+We noticed that the rounding function <span class="math inline">\(n(\nu)\)</span> can be rewritten
+as an affine function with respect to <span class="math inline">\(\nu\)</span>, avoiding to do the same
+operations inside the loop, thus saving time and memory.
+The explicit expression and the affine expression were both implemented
+using a traditional loop, list comprehension, and Julia’s broadcast operator.
+The list comprehension was clearly the fastest, without compromising
+the function’s readability nor memory consumption.</p>
 
+<p>It is worth noting that all of the tested methods outperform
+the preexisting implementation which had redundant loops
+for memory allocation and variable assignment.</p>
+</div>
+</div>
+<div id="results" class="section level2">
+<h2><span class="header-section-number">4.2</span> Results</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>In the figure above, we present the results of the algorithm applied to a denoising task.
+Namely, given a sound signal <span class="math inline">\(s\)</span>, we let <span class="math inline">\(s_\varepsilon= s + g_\varepsilon\)</span>,
+where <span class="math inline">\(g_\varepsilon\sim \mathcal N(0,\varepsilon)\)</span> is a gaussian random variable.
+We then apply the proposed sound processing algorithm to obtain <span class="math inline">\(\tilde s_\varepsilon\)</span>.
+As a reconstruction metric we present both the norm <span class="math inline">\(\left\lVert\cdot\right\rVert\)</span>
+where for a real signal <span class="math inline">\(s\)</span>, <span class="math inline">\(\left\lVert s\right\rVert = \left\lVert s\right\rVert_1/\dim(s)\)</span>
+with <span class="math inline">\(\left\lVert\cdot\right\rVert_1\)</span> as the <span class="math inline">\(L_1\)</span> norm
+and the standard deviation <span class="math inline">\(\mathrm{std}(\tilde s_\varepsilon -\tilde s)\)</span>.
+We observe that according to both metrics the algorithm indeed improves the signal <span class="citation">[<a href="6_appendix.html#ref-asswad2021">2</a>]</span>.</p>
 <div style="page-break-after: always;"></div>
 
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="0_pre_intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="3_WCA1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="5_conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

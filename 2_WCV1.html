@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A bio-inspired geometric model for sound reconstruction</title>
-  <meta name="description" content="A bio-inspired geometric model for sound reconstruction" />
+  <title>2 Image reconstruction model | A bio-inspired geometric model for sound reconstruction</title>
+  <meta name="description" content="2 Image reconstruction model | A bio-inspired geometric model for sound reconstruction" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A bio-inspired geometric model for sound reconstruction" />
+  <meta property="og:title" content="2 Image reconstruction model | A bio-inspired geometric model for sound reconstruction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rand-asswad/WCA1-docs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A bio-inspired geometric model for sound reconstruction" />
+  <meta name="twitter:title" content="2 Image reconstruction model | A bio-inspired geometric model for sound reconstruction" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="0_pre_intro.html"/>
+<link rel="prev" href="1_intro.html"/>
+<link rel="next" href="3_WCA1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -150,36 +150,54 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">A bio-inspired geometric model for sound reconstruction</h1>
-<h2 class="subtitle"><em>Master’s Thesis</em></h2>
-<p class="author"><em>Rand ASSWAD</em></p>
-<p class="date"><em>04/01/2021 - 30/06/2021</em></p>
+<div id="image-reconstruction-model" class="section level1">
+<h1><span class="header-section-number">2</span> Image reconstruction model</h1>
+<p>The geometric model for sound reconstruction was inspired by
+a sub-Riemannian model of the visual cortex V1 for image reconstruction.
+Therefore, a preliminary study of the image reconstruction was needed
+in order to understand the sound model and the challenges that are
+faced in adapting the initial model for sound reconstruction.</p>
+<div id="neoro-geometric-model-of-v1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Neoro-geometric model of V1</h2>
+<p>My supervisors and their colleagues have presented a cortical-inspired
+image reconstruction algorithm <span class="citation">[<a href="6_appendix.html#ref-bertalmio2018">3</a>,<a href="6_appendix.html#ref-boscain2017">4</a>]</span> based
+on the Citti-Petitot-Sarti (CPS) model of the human primary visual cortex V1 <span class="citation">[<a href="6_appendix.html#ref-citti2006">8</a>,<a href="6_appendix.html#ref-petitot1999">21</a>]</span>.</p>
+<p>The CPS model is based on the work of Hubel and Wiesel <span class="citation">[<a href="6_appendix.html#ref-hubel1959">16</a>]</span> who observed that there are
+groups of neurons sensitive to positions and directions.
+This has inspired Hoffman <span class="citation">[<a href="6_appendix.html#ref-hoffman1989">15</a>]</span> to model V1 as a contact space
+(a three-dimensional manifold endowed with a smooth map).
+Since an image can be seen as a function <span class="math inline">\(f:\mathbb{R}^2\rightarrow\mathbb{R}_+\)</span> representing
+the grey level at given coordinates, the visual cortex adds
+the angle <span class="math inline">\(\theta\in P^1\)</span> of the tangent line to the curve,
+where <span class="math inline">\(P^1=\mathbb{R}/\pi\mathbb{Z}\)</span> is the projective line of non-directed angles.
+The model therefore lifts the image into <span class="math inline">\(\mathbb{R}^2\times P^1\)</span>.</p>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="wilson-cowan-model-in-v1" class="section level2">
+<h2><span class="header-section-number">2.2</span> Wilson-Cowan model in V1</h2>
+<p>The Wilson-Cowan (WC) model <span class="citation">[<a href="6_appendix.html#ref-wilson1972">26</a>]</span> describes the evolution of neural activations,
+more precisely, it describes the evolution of excitatory and inhibitory activity in
+a synaptically coupled neuronal network.</p>
+<p>The interaction between the hypercolumns in V1 can be described through
+the WC equations <span class="citation">[<a href="6_appendix.html#ref-bressloff2002">6</a>]</span>.
+An integro-differential equation describing the state <span class="math inline">\(a(x,\theta,t)\)</span> of a population
+of neurons with V1 coordinates <span class="math inline">\(x\in\mathbb{R}^2\)</span> and orientation <span class="math inline">\(\theta\in P^1\)</span> at time <span class="math inline">\(t&gt;0\)</span> <span class="citation">[<a href="6_appendix.html#ref-bertalmio2018">3</a>]</span>.</p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial}{\partial t}a(x,\theta,t) = -\alpha a(x,\theta,t) + \nu
+\int_{\mathbb{R}^2\times P^1} \omega(x,\theta\| x&#39;,\theta&#39;) \sigma(a(x&#39;,\theta&#39;,t)) \mathrm{d}x&#39;\mathrm{d}\theta&#39;
++ h(x,\theta,t)
+\end{equation}\]</span></p>
 
 <div style="page-break-after: always;"></div>
 
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="0_pre_intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="1_intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3_WCA1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
