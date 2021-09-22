@@ -398,7 +398,7 @@ of the contact space, which is a well-defined surface
 if $\abs{S}\in\Cl^2$ and $\mathrm{Hess}\abs{S}$ is non-degenerate [@boscain2021].
 
 \begin{equation}
-\Sigma = \sset{(\tau,\w\nu)\in\R^3 \vert\nu\partial_\w\abs{S}(\tau,\w) + \partial_\tau\abs{S}(\tau,\w) = 0}
+\Sigma = \sset{(\tau,\w,\nu)\in\R^3 \vert\nu\partial_\w\abs{S}(\tau,\w) + \partial_\tau\abs{S}(\tau,\w) = 0}
 \end{equation}
 
 Which allows to finally define the sound lift in the contact space as
@@ -496,7 +496,7 @@ the evolution of neural activations in V1 as well as A1
 [@ermentrout1979;@bressloff2002a;@loebel2007;@rankin2015;@zulfiqar2019;@boscain2017;@bertalmio2018].
 
 The WC equations have the advantage of being flexible as they can be applied independently
-of the underlying geometric structure, which is only encoded inthe kernel of the integral term.
+of the underlying geometric structure, which is only encoded in the kernel of the integral term.
 They allow as well for a natural implementation of delay terms in the interactions
 and can be easily tuned via few parameters with clear effect on the results.
 
@@ -505,7 +505,7 @@ to the WC differo-integral equation with a delay $\delta$.
 
 \begin{equation}
 \dtfrac a(t,\w,\nu) = -\alpha a(t,\w,\nu) + \beta L(t,\w,\nu)
-\gamma\int_{\R^2} k_\delta(\w,\nu\Vert\w',\nu') \sigma(a(t-\delta,\w',\nu')) \dw'\dnu'
++ \gamma\int_{\R^2} k_\delta(\w,\nu\Vert\w',\nu') \sigma(a(t-\delta,\w',\nu')) \dw'\dnu'
 \end{equation}
 
 where
@@ -513,7 +513,7 @@ where
 - $\alpha,\beta,\gamma>0$ are parameters
 - $\sigma:\C\rightarrow\C$ is a non-linear sigmoid where $\sigma(\rho e^{i\theta})=\tilde\sigma(\rho)e^{i\theta}$
   with $\tilde\sigma(x)=\min\sset{\max\sset{0,\kappa x}, 1},\forall x\in\R$ given a fixed $\kappa>0$.
-- $k_\delta(\w,\nu\Vert\w',\nu') \sigma(a(t-\delta,\w',\nu'))$ is a weight modeling the interaction
+- $k_\delta(\w,\nu\Vert\w',\nu')$ is a weight modeling the interaction
   between $(\w,\nu)$ and $(\w',\nu')$ after a delay $\delta>0$ via the kernel of the transport-diffusion
   operator associated to the contact structure of A1.
 

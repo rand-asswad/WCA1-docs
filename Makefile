@@ -32,6 +32,11 @@ reveal: ${SLIDES_SRC}
 	@cp img/logo_*.png ${OUTPUT_DIR}/img/
 	@echo "done!"
 
+beamer: ${SLIDES_SRC}
+	@echo "rendering beamer presentation..."
+	Rscript -e "rmarkdown::render('$<', 'beamer_presentation', output_dir='${OUTPUT_DIR}', output_file='presentation.pdf')"
+	@echo "done!"
+
 clean:
 	@-rm -rf ${OUTPUT_DIR} *_files *_cache
 	@echo "cleaned book output."

@@ -1,0 +1,55 @@
+\usepackage[defaultlines=10,all]{nowidow}
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+
+\usepackage{array}
+
+% title frame logo
+
+\institute{
+    \begin{center}
+        \centering
+        \begin{minipage}[t]{0.45\textwidth}
+        \raggedright\includegraphics[height=1.5cm]{img/logo_insa.png}\\
+        \textit{Department of Applied Mathematics}\\
+        Natalie FORTIER\\
+        Cecilia ZANNI-MERK
+        \end{minipage}~\hfill~%
+        \begin{minipage}[t]{0.45\textwidth}
+        \raggedleft\includegraphics[height=1.5cm]{img/logo_l2s.png}\\
+        Dario PRANDI\\
+        Ugo BOSCAIN
+        \end{minipage}
+    \end{center}
+}
+
+% beamer shit
+
+\setbeamertemplate{footline}{
+\leavevmode%
+\hbox{\hspace*{-0.06cm}
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+	\usebeamerfont{author in head/foot}\insertshortauthor
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+	\usebeamerfont{section in head/foot}\insertshorttitle
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+	\usebeamerfont{section in head/foot}\insertshortdate{}\hspace*{1em}
+	\insertframenumber/\inserttotalframenumber\hspace*{1em}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+
+% theorem environments
+
+%\theoremstyle{theorem}
+\newtheorem{prop}{Proposition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\input{include/math.tex}
+
+\DeclareUnicodeCharacter{03BD}{$\nu$}

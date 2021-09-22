@@ -63,3 +63,12 @@ revealjs::revealjs_presentation:
   includes:
     after_body: include/reveal_scripts.html
   pandoc_args: ["--standalone"]
+beamer_presentation:
+  theme: "Warsaw"
+  slide_level: 3
+  incremental: false
+  toc: true
+  keep_tex: true
+  template: include/template.beamer
+  includes:
+    in_header: include/beamer.tex
