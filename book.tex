@@ -87,12 +87,6 @@
 %\usepackage{centernot}
 \newtheorem{thm}{Theorem}
 
-% music characters
-\usepackage{musicography}
-\DeclareUnicodeCharacter{266F}{\musSharp{}}
-\DeclareUnicodeCharacter{266D}{\musFlat{}}
-\DeclareUnicodeCharacter{266E}{\musNatural{}}
-
 \makeatletter
 
 \usepackage{fancyhdr}
@@ -214,12 +208,14 @@
 
 \def\Cl{\mathcal{C}}
 \def\U{\mathcal{U}}
+\def\F{\mathcal{F}}
 \def\H{\mathbb{H}}
 
 \def\w{\omega}
 \let\aphi\phi
 \def\phi{\varphi}
 \def\epsilon{\varepsilon}
+\def\eps{\varepsilon}
 
 \def\numin{\nu_{\min}}
 \def\numax{\nu_{\max}}
@@ -263,6 +259,8 @@
 \def\Proj{\mathrm{Proj}}
 
 \def\Cd{\mathrm{Cauchy}}
+\def\Nd{\mathcal{N}}
+\def\med{\mathrm{median}}
 
 \pagebreak
 
@@ -863,7 +861,7 @@ of the contact space, which is a well-defined surface
 if \(\left\lvert S\right\rvert\in\mathcal{C}^2\) and \(\mathrm{Hess}\left\lvert S\right\rvert\) is non-degenerate {[}\protect\hyperlink{ref-boscain2021}{5}{]}.
 
 \begin{equation}
-\Sigma = \left\{(\tau,\omega\nu)\in\mathbb{R}^3 \vert\nu\partial_\omega\left\lvert S\right\rvert(\tau,\omega) + \partial_\tau\left\lvert S\right\rvert(\tau,\omega) = 0\right\}
+\Sigma = \left\{(\tau,\omega,\nu)\in\mathbb{R}^3 \vert\nu\partial_\omega\left\lvert S\right\rvert(\tau,\omega) + \partial_\tau\left\lvert S\right\rvert(\tau,\omega) = 0\right\}
 \end{equation}
 
 Which allows to finally define the sound lift in the contact space as
@@ -962,7 +960,7 @@ the evolution of neural activations in V1 as well as A1
 {[}\protect\hyperlink{ref-bertalmio2018}{3},\protect\hyperlink{ref-boscain2017}{4},\protect\hyperlink{ref-bressloff2002a}{7},\protect\hyperlink{ref-ermentrout1979}{11},\protect\hyperlink{ref-loebel2007}{17},\protect\hyperlink{ref-rankin2015}{22},\protect\hyperlink{ref-zulfiqar2019}{28}{]}.
 
 The WC equations have the advantage of being flexible as they can be applied independently
-of the underlying geometric structure, which is only encoded inthe kernel of the integral term.
+of the underlying geometric structure, which is only encoded in the kernel of the integral term.
 They allow as well for a natural implementation of delay terms in the interactions
 and can be easily tuned via few parameters with clear effect on the results.
 
@@ -971,7 +969,7 @@ to the WC differo-integral equation with a delay \(\delta\).
 
 \begin{equation}
 \frac{\partial}{\partial t}a(t,\omega,\nu) = -\alpha a(t,\omega,\nu) + \beta L(t,\omega,\nu)
-\gamma\int_{\mathbb{R}^2} k_\delta(\omega,\nu\Vert\omega',\nu') \sigma(a(t-\delta,\omega',\nu')) \mathrm{d}\omega'\mathrm{d}\nu'
++ \gamma\int_{\mathbb{R}^2} k_\delta(\omega,\nu\Vert\omega',\nu') \sigma(a(t-\delta,\omega',\nu')) \mathrm{d}\omega'\mathrm{d}\nu'
 \end{equation}
 
 where
@@ -984,7 +982,7 @@ where
   \(\sigma:\mathbb{C}\rightarrow\mathbb{C}\) is a non-linear sigmoid where \(\sigma(\rho e^{i\theta})=\tilde\sigma(\rho)e^{i\theta}\)
   with \(\tilde\sigma(x)=\min\left\{\max\left\{0,\kappa x\right\}, 1\right\},\forall x\in\mathbb{R}\) given a fixed \(\kappa>0\).
 \item
-  \(k_\delta(\omega,\nu\Vert\omega',\nu') \sigma(a(t-\delta,\omega',\nu'))\) is a weight modeling the interaction
+  \(k_\delta(\omega,\nu\Vert\omega',\nu')\) is a weight modeling the interaction
   between \((\omega,\nu)\) and \((\omega',\nu')\) after a delay \(\delta>0\) via the kernel of the transport-diffusion
   operator associated to the contact structure of A1.
 \end{itemize}
