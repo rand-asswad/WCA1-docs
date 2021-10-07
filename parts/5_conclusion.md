@@ -191,8 +191,8 @@ I also gained an appreciation for geometry and analysis.
 
 While I didn't get the opportunity to pursue a PhD thesis in this project,
 I have decided, with the help and guidance of my supervisors, to enroll in a
-theoretical mathematics Master's degree at University of Franche-Comté in Besançon.
-The program focuses on analysis, algebra and PDEs from a theoretical point of view,
+theoretical mathematics Master's degree at University of Lorraine in Nancy.
+The program focuses on PDEs and control theory from a theoretical point of view,
 which would allow me, combined with my skills in applied mathematics that
 I cultivated at INSA Rouen Normandie, to pursue a PhD in these domains.
 

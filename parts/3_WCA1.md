@@ -87,7 +87,7 @@ Essentially, the STFT $S(\tau,\w)$ is the Fourier transform of $s(t)w(t-\tau)$
 (the signal taken over a sliding window along the time axis.)
 
 \begin{equation}
-S(\tau,\w) = \int_\R s(t)w(t-\tau)e^{-2\pi it\w} \dt
+S(\tau,\w) = \int_\R s(t)w(t-\tau)e^{-2\pi i\w t} \dt
 \end{equation}
 
 ![Signal windowing for the STFT [@grochenig2001]](img/stft_grochenig.png){width=40%}
@@ -104,7 +104,7 @@ time and phase shifts acting on realizable signals $s\in L^2(\R)$.
 We notice that the STFT can be formulated using these unitary operators
 
 \begin{align}
-S(\tau,\w) &= \int_\R s(t)w(t-\tau)e^{-2\pi it\w} \dt\\
+S(\tau,\w) &= \int_\R s(t)w(t-\tau)e^{-2\pi i\w t} \dt\\
     &= \int_\R s(t) \overline{M_\w T_\tau w(t)} \dt\\
     &= \dotp{s, M_\w T_\tau w}_{L^2(\R)}
 \end{align}
@@ -132,7 +132,7 @@ with respect to the window size $r=R/N$ where $r\in[0,1[$.
 
 The discrete STFT of a signal $s\in L^2([0,T])$ is therefore
 \begin{equation}
-S[m,\w] = \sum_{t=0}^{T} s[t]w[t-mH]e^{-2\pi it\w}
+S[m,\w] = \sum_{t=0}^{T} s[t]w[t-mH]e^{-2\pi i\w t}
 \end{equation}
 
 The choice of parameters has direct influence over the discrete STFT
@@ -263,7 +263,7 @@ we have for all $s\in L^2(\R)$,
 \begin{align}
 s(t) &=\frac{1}{\dotp{w,h}} \iint_{\R^2}V_w s(\tau,\w)M_\w T_\tau h(t) \dw\dtau\\
 	 &= \frac{1}{\dotp{w,h}}
-    	\iint_{\R^2} S(\tau,\w) h(t-\tau) e^{2\pi it\w} \dw\dtau
+    	\iint_{\R^2} S(\tau,\w) h(t-\tau) e^{2\pi i\w t} \dw\dtau
 \end{align}
 
 ### Griffin-Lim Algorithm

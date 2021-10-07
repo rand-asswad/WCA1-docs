@@ -59,9 +59,9 @@ The sound chirpiness is computed by calculating gradient of the spectrum matrix 
 which gives the chirpiness with respect to each time-frequency pair
 
 \begin{equation}
-\nu[\tau,\w] =
+\nu(\tau,\w) =
 \begin{cases}
--\frac{\partial_\tau\abs{S}[\tau,\w]}{\partial_\w\abs{S}[\tau,\w]} & \text{if}~\abs{\partial_\w\abs{S}[\tau,\w]}>\epsilon\\
+-\frac{\partial_\tau\abs{S}(\tau,\w)}{\partial_\w\abs{S}(\tau,\w)} & \text{if}~\abs{\partial_\w\abs{S}(\tau,\w)}>\epsilon\\
 0 & \text{otherwise}
 \end{cases}
 \end{equation}

@@ -545,7 +545,7 @@ $$\Proj\sset{L(\tau,\w,\nu)}(\tau,\w) = \int_\R L(\tau,\w,\nu)\dnu$$
 
 We model the cortical activations in A1 as follows
 
-- The primary aidtory cortex (A1) is a space of $(\w,\nu)\in\R^2$.
+- The primary auditory cortex (A1) is a space of $(\w,\nu)\in\R^2$.
 - A1 receives the sound lift to the contact space $L(t,\w,\nu)$ at every instant $t$.
 - The *neuron* receives an external charge $S(t,\w)$ if $(t,\w,\nu)\in\Sigma$
   and no charge otherwise.
@@ -775,7 +775,7 @@ The benchmarked median time for each method ploted against the speech samples
 ::: {.column width="40%"}
 ![](img/benchmark_time_boxplot.png){width=80%}
 
-Box plots of the benchmarked time for each method on the samples from the speech library
+Box plots of the benchmarked time for each method on the speech samples
 :::
 :::::::::::::: 
 
