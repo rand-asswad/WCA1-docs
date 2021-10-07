@@ -513,7 +513,7 @@ Essentially, the STFT \(S(\tau,\omega)\) is the Fourier transform of \(s(t)w(t-\
 (the signal taken over a sliding window along the time axis.)
 
 \begin{equation}
-S(\tau,\omega) = \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi it\omega} \mathrm{d}t
+S(\tau,\omega) = \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi i\omega t} \mathrm{d}t
 \end{equation}
 
 \begin{figure}
@@ -540,7 +540,7 @@ time and phase shifts acting on realizable signals \(s\in L^2(\mathbb{R})\).
 We notice that the STFT can be formulated using these unitary operators
 
 \begin{align}
-S(\tau,\omega) &= \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi it\omega} \mathrm{d}t\\
+S(\tau,\omega) &= \int_\mathbb{R}s(t)w(t-\tau)e^{-2\pi i\omega t} \mathrm{d}t\\
     &= \int_\mathbb{R}s(t) \overline{M_\omega T_\tau w(t)} \mathrm{d}t\\
     &= \left\langle s, M_\omega T_\tau w\right\rangle_{L^2(\mathbb{R})}
 \end{align}
@@ -569,7 +569,7 @@ with respect to the window size \(r=R/N\) where \(r\in[0,1[\).
 
 The discrete STFT of a signal \(s\in L^2([0,T])\) is therefore
 \begin{equation}
-S[m,\omega] = \sum_{t=0}^{T} s[t]w[t-mH]e^{-2\pi it\omega}
+S[m,\omega] = \sum_{t=0}^{T} s[t]w[t-mH]e^{-2\pi i\omega t}
 \end{equation}
 
 The choice of parameters has direct influence over the discrete STFT
@@ -716,7 +716,7 @@ we have for all \(s\in L^2(\mathbb{R})\),
 \begin{align}
 s(t) &=\frac{1}{\left\langle w,h\right\rangle} \iint_{\mathbb{R}^2}V_w s(\tau,\omega)M_\omega T_\tau h(t) \mathrm{d}\omega\mathrm{d}\tau\\
      &= \frac{1}{\left\langle w,h\right\rangle}
-        \iint_{\mathbb{R}^2} S(\tau,\omega) h(t-\tau) e^{2\pi it\omega} \mathrm{d}\omega\mathrm{d}\tau
+        \iint_{\mathbb{R}^2} S(\tau,\omega) h(t-\tau) e^{2\pi i\omega t} \mathrm{d}\omega\mathrm{d}\tau
 \end{align}
 
 \hypertarget{griffin-lim-algorithm}{%
@@ -1071,9 +1071,9 @@ The sound chirpiness is computed by calculating gradient of the spectrum matrix 
 which gives the chirpiness with respect to each time-frequency pair
 
 \begin{equation}
-\nu[\tau,\omega] =
+\nu(\tau,\omega) =
 \begin{cases}
--\frac{\partial_\tau\left\lvert S\right\rvert[\tau,\omega]}{\partial_\omega\left\lvert S\right\rvert[\tau,\omega]} & \text{if}~\left\lvert\partial_\omega\left\lvert S\right\rvert[\tau,\omega]\right\rvert>\varepsilon\\
+-\frac{\partial_\tau\left\lvert S\right\rvert(\tau,\omega)}{\partial_\omega\left\lvert S\right\rvert(\tau,\omega)} & \text{if}~\left\lvert\partial_\omega\left\lvert S\right\rvert(\tau,\omega)\right\rvert>\varepsilon\\
 0 & \text{otherwise}
 \end{cases}
 \end{equation}
@@ -1368,8 +1368,8 @@ I also gained an appreciation for geometry and analysis.
 
 While I didn't get the opportunity to pursue a PhD thesis in this project,
 I have decided, with the help and guidance of my supervisors, to enroll in a
-theoretical mathematics Master's degree at University of Franche-Comté in Besançon.
-The program focuses on analysis, algebra and PDEs from a theoretical point of view,
+theoretical mathematics Master's degree at University of Lorraine in Nancy.
+The program focuses on PDEs and control theory from a theoretical point of view,
 which would allow me, combined with my skills in applied mathematics that
 I cultivated at INSA Rouen Normandie, to pursue a PhD in these domains.
 
