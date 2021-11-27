@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>B Uncertainty principle | A bio-inspired geometric model for sound reconstruction</title>
+  <meta name="description" content="B Uncertainty principle | A bio-inspired geometric model for sound reconstruction" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="B Uncertainty principle | A bio-inspired geometric model for sound reconstruction" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rand-asswad/WCA1-docs" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="B Uncertainty principle | A bio-inspired geometric model for sound reconstruction" />
+  
+  
+  
+
+<meta name="author" content="Rand ASSWAD" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="6A_stft.html"/>
+<link rel="next" href="6C_heisenberg.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="include/gitbook.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="https://www.insa-rouen.fr/" target="_blank"><img src="img/logo_insa.png"></a></li>
+<li class="toc-title"><a href="./">A bio-geometric model for sound reconstruction</a></li>
+<li class="toc-author"><a href="/" target="_blank">Rand ASSWAD</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="0_pre_intro.html"><a href="0_pre_intro.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="1_intro.html"><a href="1_intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1_intro.html"><a href="1_intro.html#laboratory-and-supervision"><i class="fa fa-check"></i><b>1.1</b> Laboratory and supervision</a></li>
+<li class="chapter" data-level="1.2" data-path="1_intro.html"><a href="1_intro.html#internship-mission"><i class="fa fa-check"></i><b>1.2</b> Internship mission</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2_WCV1.html"><a href="2_WCV1.html"><i class="fa fa-check"></i><b>2</b> Image reconstruction model</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2_WCV1.html"><a href="2_WCV1.html#neoro-geometric-model-of-v1"><i class="fa fa-check"></i><b>2.1</b> Neoro-geometric model of V1</a></li>
+<li class="chapter" data-level="2.2" data-path="2_WCV1.html"><a href="2_WCV1.html#wilson-cowan-model-in-v1"><i class="fa fa-check"></i><b>2.2</b> Wilson-Cowan model in V1</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3_WCA1.html"><a href="3_WCA1.html"><i class="fa fa-check"></i><b>3</b> Sound reconstruction model</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3_WCA1.html"><a href="3_WCA1.html#from-v1-to-a1"><i class="fa fa-check"></i><b>3.1</b> From V1 to A1</a></li>
+<li class="chapter" data-level="3.2" data-path="3_WCA1.html"><a href="3_WCA1.html#sound-reconstruction-pipeline"><i class="fa fa-check"></i><b>3.2</b> Sound reconstruction pipeline</a></li>
+<li class="chapter" data-level="3.3" data-path="3_WCA1.html"><a href="3_WCA1.html#time-frequency-representation"><i class="fa fa-check"></i><b>3.3</b> Time-Frequency representation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="3_WCA1.html"><a href="3_WCA1.html#the-short-time-fourier-transform"><i class="fa fa-check"></i><b>3.3.1</b> The Short-Time Fourier Transform</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3_WCA1.html"><a href="3_WCA1.html#time-and-frequency-shifts-operators"><i class="fa fa-check"></i><b>3.3.2</b> Time and frequency shifts operators</a></li>
+<li class="chapter" data-level="3.3.3" data-path="3_WCA1.html"><a href="3_WCA1.html#discrete-stft"><i class="fa fa-check"></i><b>3.3.3</b> Discrete STFT</a></li>
+<li class="chapter" data-level="3.3.4" data-path="3_WCA1.html"><a href="3_WCA1.html#stft-windowing"><i class="fa fa-check"></i><b>3.3.4</b> STFT windowing</a></li>
+<li class="chapter" data-level="3.3.5" data-path="3_WCA1.html"><a href="3_WCA1.html#uncertainty-principle-and-resolution-issues"><i class="fa fa-check"></i><b>3.3.5</b> Uncertainty principle and resolution issues</a></li>
+<li class="chapter" data-level="3.3.6" data-path="3_WCA1.html"><a href="3_WCA1.html#inverse-short-time-fourier-transform"><i class="fa fa-check"></i><b>3.3.6</b> Inverse Short-Time Fourier Transform</a></li>
+<li class="chapter" data-level="3.3.7" data-path="3_WCA1.html"><a href="3_WCA1.html#griffin-lim-algorithm"><i class="fa fa-check"></i><b>3.3.7</b> Griffin-Lim Algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3_WCA1.html"><a href="3_WCA1.html#the-lift-to-the-augmented-space"><i class="fa fa-check"></i><b>3.4</b> The lift to the augmented space</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="3_WCA1.html"><a href="3_WCA1.html#the-sound-chirpiness"><i class="fa fa-check"></i><b>3.4.1</b> The sound chirpiness</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3_WCA1.html"><a href="3_WCA1.html#single-time-varying-frequency"><i class="fa fa-check"></i><b>3.4.2</b> Single time-varying frequency</a></li>
+<li class="chapter" data-level="3.4.3" data-path="3_WCA1.html"><a href="3_WCA1.html#control-system"><i class="fa fa-check"></i><b>3.4.3</b> Control system</a></li>
+<li class="chapter" data-level="3.4.4" data-path="3_WCA1.html"><a href="3_WCA1.html#lift-to-the-contact-space"><i class="fa fa-check"></i><b>3.4.4</b> Lift to the contact space</a></li>
+<li class="chapter" data-level="3.4.5" data-path="3_WCA1.html"><a href="3_WCA1.html#lift-implementation"><i class="fa fa-check"></i><b>3.4.5</b> Lift implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3_WCA1.html"><a href="3_WCA1.html#cortical-activations-in-a1"><i class="fa fa-check"></i><b>3.5</b> Cortical activations in A1</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4_implementation.html"><a href="4_implementation.html"><i class="fa fa-check"></i><b>4</b> Implementation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4_implementation.html"><a href="4_implementation.html#the-wca1.jl-library"><i class="fa fa-check"></i><b>4.1</b> The <code>WCA1.jl</code> library</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="4_implementation.html"><a href="4_implementation.html#the-stft-module"><i class="fa fa-check"></i><b>4.1.1</b> The STFT module</a></li>
+<li class="chapter" data-level="4.1.2" data-path="4_implementation.html"><a href="4_implementation.html#optimizing-the-lift-module"><i class="fa fa-check"></i><b>4.1.2</b> Optimizing the lift module</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="4_implementation.html"><a href="4_implementation.html#results"><i class="fa fa-check"></i><b>4.2</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5_conclusion.html"><a href="5_conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="5_conclusion.html"><a href="5_conclusion.html#reviewing-the-model"><i class="fa fa-check"></i><b>5.1</b> Reviewing the model</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="5_conclusion.html"><a href="5_conclusion.html#model-analysis"><i class="fa fa-check"></i><b>5.1.1</b> Model analysis</a></li>
+<li class="chapter" data-level="5.1.2" data-path="5_conclusion.html"><a href="5_conclusion.html#wavelet-transform"><i class="fa fa-check"></i><b>5.1.2</b> Wavelet transform</a></li>
+<li class="chapter" data-level="5.1.3" data-path="5_conclusion.html"><a href="5_conclusion.html#the-lift-operator"><i class="fa fa-check"></i><b>5.1.3</b> The lift operator</a></li>
+<li class="chapter" data-level="5.1.4" data-path="5_conclusion.html"><a href="5_conclusion.html#the-group-representation"><i class="fa fa-check"></i><b>5.1.4</b> The group representation</a></li>
+<li class="chapter" data-level="5.1.5" data-path="5_conclusion.html"><a href="5_conclusion.html#the-wca1.jl-package"><i class="fa fa-check"></i><b>5.1.5</b> The <code>WCA1.jl</code> package</a></li>
+<li class="chapter" data-level="5.1.6" data-path="5_conclusion.html"><a href="5_conclusion.html#a-sparse-lift-implementation"><i class="fa fa-check"></i><b>5.1.6</b> A sparse lift implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="5_conclusion.html"><a href="5_conclusion.html#acquired-knowledge"><i class="fa fa-check"></i><b>5.2</b> Acquired knowledge</a></li>
+<li class="chapter" data-level="5.3" data-path="5_conclusion.html"><a href="5_conclusion.html#my-future-project"><i class="fa fa-check"></i><b>5.3</b> My future project</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="6A_stft.html"><a href="6A_stft.html"><i class="fa fa-check"></i><b>A</b> Short-Time Fourier Transform</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="6A_stft.html"><a href="6A_stft.html#parsevals-formula"><i class="fa fa-check"></i><b>A.1</b> Parseval’s formula</a></li>
+<li class="chapter" data-level="A.2" data-path="6A_stft.html"><a href="6A_stft.html#inverse-short-time-fourier-transform-1"><i class="fa fa-check"></i><b>A.2</b> Inverse Short-Time Fourier Transform</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="6B_uncertainty.html"><a href="6B_uncertainty.html"><i class="fa fa-check"></i><b>B</b> Uncertainty principle</a></li>
+<li class="chapter" data-level="C" data-path="6C_heisenberg.html"><a href="6C_heisenberg.html"><i class="fa fa-check"></i><b>C</b> Heisenberg group</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="6C_heisenberg.html"><a href="6C_heisenberg.html#heisenberg-group-action-on-the-contact-space"><i class="fa fa-check"></i><b>C.1</b> Heisenberg group action on the contact space</a></li>
+<li class="chapter" data-level="C.2" data-path="6C_heisenberg.html"><a href="6C_heisenberg.html#introducing-the-chirpiness-to-the-heisenberg-group"><i class="fa fa-check"></i><b>C.2</b> Introducing the chirpiness to the Heisenberg group</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="7_refs.html"><a href="7_refs.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="book.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> PDF book</a></li>
+<li><a href="onepage.html" target="_blank"><i class="fa fa-file-code-o"></i> HTML standalone version</a></li>
+<li><a href="presentation.pdf" target="_blank"><img class="icon" src="include/presentation.svg"> Presentation slides</a></li>
+<li><a href="https://github.com/rand-asswad/WCA1" target="_blank"><i class="fa fa-github"></i> Github repository</a></li>
+<li><a href="https://github.com/rand-asswad/WCA1/archive/refs/heads/master.zip"><i class="fa fa-download"></i> Download source code</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A bio-inspired geometric model for sound reconstruction</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="uncertainty" class="section level1" number="7">
+<h1><span class="header-section-number">B</span> Uncertainty principle</h1>
+<p>The Heisenberg-Gabor limit, is a direct result
+of the Heisenberg-Pauli-Weyl inequality <span class="citation">[<a href="#ref-grochenig2001" role="doc-biblioref">15</a>]</span>.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-4" class="theorem"><strong>Theorem B.1  (Heisenberg-Pauli-Weyl inequality) </strong></span>Let <span class="math inline">\(f\in L^2(\mathbb{R})\)</span>, then <span class="math inline">\(\forall a,b\in\mathbb{R}\)</span>
+<span class="math display">\[\begin{equation}
+\left(\int_\mathbb{R}(t-a)^2\left\lvert f(t)\right\rvert^2\mathrm{d}t\right)^{1/2}
+\left(\int_\mathbb{R}(\omega-b)^2\left\lvert\hat f(\omega)\right\rvert^2\mathrm{d}\omega\right)^{1/2}
+\geq \frac{\left\lVert f\right\rVert_2^2}{4\pi}
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span>We aim to prove the uncertainty principle for self-adjoint operators
+on a Hilbert space <span class="math inline">\(H\)</span> in the general case.
+We then introduce self-adjoint operators on a Hilbert subspace of <span class="math inline">\(L^2(\mathbb{R})\)</span>
+giving rise to the uncertainty principle for realizable signals
+(the Heisenberg-Pauly-Weyl inequality).</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-5" class="lemma"><strong>Lemma B.1  </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two self-adjoint linear operators
+on a Hilbert space <span class="math inline">\(H\)</span>, whose commutator is defined as
+<span class="math display">\[\begin{equation}
+[A,B]=AB-BA
+\end{equation}\]</span>
+Then for all <span class="math inline">\(a,b\in\mathbb{R}\)</span> and <span class="math inline">\(f\in H\)</span>.
+<span class="math display">\[\begin{equation}
+\left\lVert(A-a)f\right\rVert\left\lVert(B-b)f\right\rVert\geq \frac{1}{2}\left\lvert\left\langle[A,B]f,f\right\rangle\right\rvert
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>We first notice that the commutator is invariant by translation, that is <span class="math inline">\(\forall a,b\in\mathbb{R}\)</span>
+<span class="math display">\[\begin{align*}
+[A-a,B-b] &amp;= (A-a)(B-b) - (B-b)(A-a)\\
+    &amp;= (AB-bA-aB+ab) - (BA-aB-bA+ab)\\
+    &amp;= AB - BA\\
+    &amp;= [A,B]
+\end{align*}\]</span>
+We remind that an operator <span class="math inline">\(A\)</span> is self-adjoint if
+<span class="math display">\[\begin{equation}
+\forall f,g\in H, \left\langle Af,g\right\rangle = \left\langle f,Ag\right\rangle
+\end{equation}\]</span></p>
+<p>We then deduce that <span class="math inline">\(\forall f\in H\)</span>
+<span class="math display">\[\begin{align*}
+\left\langle[A,B]f,f\right\rangle &amp;= \left\langle[A-a,B-b]f,f\right\rangle \tag{translation invariance}\\
+    &amp;= \left\langle((A-a)(B-b)-(B-b)(A-a))f,f\right\rangle \tag{bilinearity}\\
+    &amp;= \left\langle(A-a)(B-b)f,f\right\rangle - \left\langle(B-b)(A-a)f,f\right\rangle\\
+    &amp;= \left\langle(B-b)f,(A-a)f\right\rangle - \left\langle(A-a)f,(B-b)f\right\rangle \tag{self-adjointness}\\
+    &amp;= \left\langle(B-b)f,(A-a)f\right\rangle - \overline{\left\langle(B-b)f,(A-a)f\right\rangle}\\
+    &amp;= 2i~\mathrm{Im}\left\langle(B-b)f,(A-a)f\right\rangle \tag{$z-\bar z = 2i~\mathrm{Im}(z),\forall z\in\mathbb{C}$}
+\end{align*}\]</span>
+Consequently,
+<span class="math display">\[\begin{align*}
+\left\lvert\left\langle[A,B]f,f\right\rangle\right\rvert &amp;= 2\left\lvert\mathrm{Im}\left\langle(B-b)f,(A-a)f\right\rangle\right\rvert\\
+    &amp;\leq 2\left\lvert\left\langle(B-b)f,(A-a)f\right\rangle\right\rvert\\
+    &amp;\leq 2\left\lVert(B-b)f\right\rVert\left\lVert(A-a)f\right\rVert \tag{Cauchy-Schwartz inequality}
+\end{align*}\]</span></p>
+</div>
+<p>We now consider the following operators
+<span class="math display">\[\begin{equation} 
+\begin{cases}
+Xf(t) = t\cdot f(t)\\
+Pf(t) = \frac{1}{2\pi i}f&#39;(t)
+\end{cases}
+\end{equation}\]</span>
+defined over
+<span class="math inline">\(H=\left\{f\in L^2(\mathbb{R})\vert f&#39;, t\mapsto tf(t),t\mapsto tf&#39;(t)\in L^2(\mathbb{R})\right\}\subset L^2(\mathbb{R})\)</span>.</p>
+<p>We first prove that these operators are self-adjoint, let <span class="math inline">\(f,g\in H\)</span>
+<span class="math display">\[\begin{equation} 
+\left\langle Xf,g\right\rangle =\int_\mathbb{R}tf(t)\overline{g(t)}\mathrm{d}t=\int_\mathbb{R}f(t)\overline{tg(t)}\mathrm{d}t= \left\langle f,Xg\right\rangle
+\end{equation}\]</span></p>
+<p>Similarly,
+<span class="math display">\[\begin{align*}
+\left\langle Pf,g\right\rangle &amp;= \left\langle\frac{1}{2\pi i}f&#39;,g\right\rangle\\
+    &amp;= \frac{1}{2\pi i}\int_\mathbb{R}f&#39;(t)\overline{g(t)}\mathrm{d}t\\
+    &amp;= -\frac{1}{2\pi i}\int_\mathbb{R}f(t)\overline{g&#39;(t)}\mathrm{d}t\tag{integration by parts}\\
+    &amp;= \int_\mathbb{R}f(t)\overline{\frac{1}{2\pi i}g&#39;(t)}\mathrm{d}t\\
+    &amp;= \left\langle f,\frac{1}{2\pi i}g&#39;\right\rangle\\
+    &amp;= \left\langle f,Pg\right\rangle
+\end{align*}\]</span></p>
+<p>The operators are linear since multiplication and derivation are linear.</p>
+<p>The commutator of <span class="math inline">\(X\)</span> and <span class="math inline">\(P\)</span> applied to <span class="math inline">\(f\in H\)</span>,
+<span class="math display">\[\begin{align*}
+[X,P]f(t) &amp;= XPf(t) - PXf(t)\\
+    &amp;= X\left(\frac{1}{2\pi i}f&#39;(t)\right) - P\left(tf(t)\right)\\
+    &amp;= \frac{t}{2\pi i}f&#39;(t) - \frac{1}{2\pi i}\left(f(t) + tf&#39;(t)\right)\\
+    &amp;= \frac{t}{2\pi i}f&#39;(t) - \frac{1}{2\pi i}f(t) - \frac{t}{2\pi i}f&#39;(t)\\
+    &amp;= -\frac{1}{2\pi i}f(t)
+\end{align*}\]</span></p>
+<p>Hence <span class="math inline">\(\forall f\in H\)</span>
+<span class="math display">\[\begin{equation}
+\left\langle[X,P]f,f\right\rangle = \left\langle-\frac{1}{2\pi i}f,f\right\rangle = \frac{i}{2\pi}\left\langle f,f\right\rangle
+= \frac{i}{2\pi}\left\lVert f\right\rVert_2^2
+\end{equation}\]</span></p>
+<p>Consequently
+<span class="math display">\[\begin{equation}\label{eq:hilb_op}
+\left\lvert\left\langle[X,P]f,f\right\rangle\right\rvert = \frac{1}{2\pi}\left\lVert f\right\rVert_2^2
+\end{equation}\]</span></p>
+<p>As <span class="math inline">\(X\)</span> and <span class="math inline">\(P\)</span> are self-adjoint linear operators on the Hilbert space <span class="math inline">\(H\)</span>,
+then following the lemma we have <span class="math inline">\(\forall a,b\in\mathbb{R},\forall f\in H\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+\left\lVert(X-a)f\right\rVert_2 \left\lVert(P-b)f\right\rVert_2 \geq \frac{1}{2}\left\lvert\left\langle[X,P]f,f\right\rangle\right\rvert
+\end{equation}\]</span></p>
+<p>Moreover, from equation () we have
+<span class="math display">\[\begin{equation}
+\left\lVert(X-a)f\right\rVert_2 \left\lVert(P-b)f\right\rVert_2 \geq \frac{1}{4\pi}\left\lVert f\right\rVert_2^2
+\end{equation}\]</span></p>
+<p>We develop the left-hand side
+<span class="math display">\[\begin{equation}\label{eq:delta_t}
+\left\lVert(X-a)f\right\rVert_2 = \left(\int_\mathbb{R}\left\lvert(X-a)f(t)\right\rvert^2\mathrm{d}t\right)^{1/2}
+= \left(\int_\mathbb{R}(t-a)^2\left\lvert f(t)\right\rvert^2\mathrm{d}t\right)^{1/2}
+\end{equation}\]</span></p>
+<p>For the second factor, we apply Parseval’s formula
+<span class="math inline">\(\left\lVert(P-b)f\right\rVert_2 = \left\lVert\mathcal{F}\left\{(P-b)f\right\}\right\rVert_2\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\mathcal{F}\left\{(P-b)f\right\}(\omega) &amp;= \mathcal{F}\left\{\frac{1}{2\pi i}f&#39; - bf\right\}(\omega)\\
+    &amp;= \frac{1}{2\pi i}\hat{f&#39;}(\omega) - b\hat{f}(\omega)\tag{linearity of $\mathcal{F}\{\cdot\}$}\\
+    &amp;= \omega\hat{f}(\omega) - b\hat{f}(\omega)\tag{derivation of $\mathcal{F}\{\cdot\}$}\\
+    &amp;= (\omega-b)\hat{f}(\omega)
+\end{align*}\]</span></p>
+<p>Hence
+<span class="math display">\[\begin{equation}\label{eq:delta_w}
+\left\lVert(P-b)f\right\rVert_2 = \left\lVert(\omega-b)\hat{f}\right\rVert_2
+= \left(\int_\mathbb{R}(\omega-b)^2\left\lvert\hat{f}(\omega)\right\rvert^2\mathrm{d}\omega\right)^{1/2}
+\end{equation}\]</span></p>
+<p>By injecting () and () in ()
+we have <span class="math inline">\(\forall a,b\in\mathbb{R},\forall f\in H\)</span>
+<span class="math display">\[\begin{equation}
+\left(\int_\mathbb{R}(t-a)^2\left\lvert f(t)\right\rvert^2\mathrm{d}t\right)^{1/2}
+\left(\int_\mathbb{R}(\omega-b)^2\left\lvert\hat{f}(\omega)\right\rvert^2\mathrm{d}\omega\right)^{1/2}
+\geq \frac{1}{4\pi}\left\lVert f\right\rVert_2^2
+\end{equation}\]</span></p>
+</div>
+
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-grochenig2001" class="csl-entry">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">Karlheinz Gröchenig. 2001. <em>Foundations of <span>Time</span>-<span>Frequency</span> <span>Analysis</span></em>. Birkhäuser Basel. DOI:https://doi.org/<a href="https://doi.org/10.1007/978-1-4612-0003-1">10.1007/978-1-4612-0003-1</a></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="6A_stft.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6C_heisenberg.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": {}
+},
+"fontsettings": false,
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["book.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

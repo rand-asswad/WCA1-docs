@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>References | A bio-inspired geometric model for sound reconstruction</title>
+  <meta name="description" content="References | A bio-inspired geometric model for sound reconstruction" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="References | A bio-inspired geometric model for sound reconstruction" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rand-asswad/WCA1-docs" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="References | A bio-inspired geometric model for sound reconstruction" />
+  
+  
+  
+
+<meta name="author" content="Rand ASSWAD" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="6C_heisenberg.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="include/gitbook.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="https://www.insa-rouen.fr/" target="_blank"><img src="img/logo_insa.png"></a></li>
+<li class="toc-title"><a href="./">A bio-geometric model for sound reconstruction</a></li>
+<li class="toc-author"><a href="/" target="_blank">Rand ASSWAD</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="0_pre_intro.html"><a href="0_pre_intro.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="1_intro.html"><a href="1_intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1_intro.html"><a href="1_intro.html#laboratory-and-supervision"><i class="fa fa-check"></i><b>1.1</b> Laboratory and supervision</a></li>
+<li class="chapter" data-level="1.2" data-path="1_intro.html"><a href="1_intro.html#internship-mission"><i class="fa fa-check"></i><b>1.2</b> Internship mission</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2_WCV1.html"><a href="2_WCV1.html"><i class="fa fa-check"></i><b>2</b> Image reconstruction model</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2_WCV1.html"><a href="2_WCV1.html#neoro-geometric-model-of-v1"><i class="fa fa-check"></i><b>2.1</b> Neoro-geometric model of V1</a></li>
+<li class="chapter" data-level="2.2" data-path="2_WCV1.html"><a href="2_WCV1.html#wilson-cowan-model-in-v1"><i class="fa fa-check"></i><b>2.2</b> Wilson-Cowan model in V1</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3_WCA1.html"><a href="3_WCA1.html"><i class="fa fa-check"></i><b>3</b> Sound reconstruction model</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3_WCA1.html"><a href="3_WCA1.html#from-v1-to-a1"><i class="fa fa-check"></i><b>3.1</b> From V1 to A1</a></li>
+<li class="chapter" data-level="3.2" data-path="3_WCA1.html"><a href="3_WCA1.html#sound-reconstruction-pipeline"><i class="fa fa-check"></i><b>3.2</b> Sound reconstruction pipeline</a></li>
+<li class="chapter" data-level="3.3" data-path="3_WCA1.html"><a href="3_WCA1.html#time-frequency-representation"><i class="fa fa-check"></i><b>3.3</b> Time-Frequency representation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="3_WCA1.html"><a href="3_WCA1.html#the-short-time-fourier-transform"><i class="fa fa-check"></i><b>3.3.1</b> The Short-Time Fourier Transform</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3_WCA1.html"><a href="3_WCA1.html#time-and-frequency-shifts-operators"><i class="fa fa-check"></i><b>3.3.2</b> Time and frequency shifts operators</a></li>
+<li class="chapter" data-level="3.3.3" data-path="3_WCA1.html"><a href="3_WCA1.html#discrete-stft"><i class="fa fa-check"></i><b>3.3.3</b> Discrete STFT</a></li>
+<li class="chapter" data-level="3.3.4" data-path="3_WCA1.html"><a href="3_WCA1.html#stft-windowing"><i class="fa fa-check"></i><b>3.3.4</b> STFT windowing</a></li>
+<li class="chapter" data-level="3.3.5" data-path="3_WCA1.html"><a href="3_WCA1.html#uncertainty-principle-and-resolution-issues"><i class="fa fa-check"></i><b>3.3.5</b> Uncertainty principle and resolution issues</a></li>
+<li class="chapter" data-level="3.3.6" data-path="3_WCA1.html"><a href="3_WCA1.html#inverse-short-time-fourier-transform"><i class="fa fa-check"></i><b>3.3.6</b> Inverse Short-Time Fourier Transform</a></li>
+<li class="chapter" data-level="3.3.7" data-path="3_WCA1.html"><a href="3_WCA1.html#griffin-lim-algorithm"><i class="fa fa-check"></i><b>3.3.7</b> Griffin-Lim Algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3_WCA1.html"><a href="3_WCA1.html#the-lift-to-the-augmented-space"><i class="fa fa-check"></i><b>3.4</b> The lift to the augmented space</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="3_WCA1.html"><a href="3_WCA1.html#the-sound-chirpiness"><i class="fa fa-check"></i><b>3.4.1</b> The sound chirpiness</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3_WCA1.html"><a href="3_WCA1.html#single-time-varying-frequency"><i class="fa fa-check"></i><b>3.4.2</b> Single time-varying frequency</a></li>
+<li class="chapter" data-level="3.4.3" data-path="3_WCA1.html"><a href="3_WCA1.html#control-system"><i class="fa fa-check"></i><b>3.4.3</b> Control system</a></li>
+<li class="chapter" data-level="3.4.4" data-path="3_WCA1.html"><a href="3_WCA1.html#lift-to-the-contact-space"><i class="fa fa-check"></i><b>3.4.4</b> Lift to the contact space</a></li>
+<li class="chapter" data-level="3.4.5" data-path="3_WCA1.html"><a href="3_WCA1.html#lift-implementation"><i class="fa fa-check"></i><b>3.4.5</b> Lift implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3_WCA1.html"><a href="3_WCA1.html#cortical-activations-in-a1"><i class="fa fa-check"></i><b>3.5</b> Cortical activations in A1</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4_implementation.html"><a href="4_implementation.html"><i class="fa fa-check"></i><b>4</b> Implementation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4_implementation.html"><a href="4_implementation.html#the-wca1.jl-library"><i class="fa fa-check"></i><b>4.1</b> The <code>WCA1.jl</code> library</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="4_implementation.html"><a href="4_implementation.html#the-stft-module"><i class="fa fa-check"></i><b>4.1.1</b> The STFT module</a></li>
+<li class="chapter" data-level="4.1.2" data-path="4_implementation.html"><a href="4_implementation.html#optimizing-the-lift-module"><i class="fa fa-check"></i><b>4.1.2</b> Optimizing the lift module</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="4_implementation.html"><a href="4_implementation.html#results"><i class="fa fa-check"></i><b>4.2</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5_conclusion.html"><a href="5_conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="5_conclusion.html"><a href="5_conclusion.html#reviewing-the-model"><i class="fa fa-check"></i><b>5.1</b> Reviewing the model</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="5_conclusion.html"><a href="5_conclusion.html#model-analysis"><i class="fa fa-check"></i><b>5.1.1</b> Model analysis</a></li>
+<li class="chapter" data-level="5.1.2" data-path="5_conclusion.html"><a href="5_conclusion.html#wavelet-transform"><i class="fa fa-check"></i><b>5.1.2</b> Wavelet transform</a></li>
+<li class="chapter" data-level="5.1.3" data-path="5_conclusion.html"><a href="5_conclusion.html#the-lift-operator"><i class="fa fa-check"></i><b>5.1.3</b> The lift operator</a></li>
+<li class="chapter" data-level="5.1.4" data-path="5_conclusion.html"><a href="5_conclusion.html#the-group-representation"><i class="fa fa-check"></i><b>5.1.4</b> The group representation</a></li>
+<li class="chapter" data-level="5.1.5" data-path="5_conclusion.html"><a href="5_conclusion.html#the-wca1.jl-package"><i class="fa fa-check"></i><b>5.1.5</b> The <code>WCA1.jl</code> package</a></li>
+<li class="chapter" data-level="5.1.6" data-path="5_conclusion.html"><a href="5_conclusion.html#a-sparse-lift-implementation"><i class="fa fa-check"></i><b>5.1.6</b> A sparse lift implementation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="5_conclusion.html"><a href="5_conclusion.html#acquired-knowledge"><i class="fa fa-check"></i><b>5.2</b> Acquired knowledge</a></li>
+<li class="chapter" data-level="5.3" data-path="5_conclusion.html"><a href="5_conclusion.html#my-future-project"><i class="fa fa-check"></i><b>5.3</b> My future project</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="6A_stft.html"><a href="6A_stft.html"><i class="fa fa-check"></i><b>A</b> Short-Time Fourier Transform</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="6A_stft.html"><a href="6A_stft.html#parsevals-formula"><i class="fa fa-check"></i><b>A.1</b> Parseval’s formula</a></li>
+<li class="chapter" data-level="A.2" data-path="6A_stft.html"><a href="6A_stft.html#inverse-short-time-fourier-transform-1"><i class="fa fa-check"></i><b>A.2</b> Inverse Short-Time Fourier Transform</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="6B_uncertainty.html"><a href="6B_uncertainty.html"><i class="fa fa-check"></i><b>B</b> Uncertainty principle</a></li>
+<li class="chapter" data-level="C" data-path="6C_heisenberg.html"><a href="6C_heisenberg.html"><i class="fa fa-check"></i><b>C</b> Heisenberg group</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="6C_heisenberg.html"><a href="6C_heisenberg.html#heisenberg-group-action-on-the-contact-space"><i class="fa fa-check"></i><b>C.1</b> Heisenberg group action on the contact space</a></li>
+<li class="chapter" data-level="C.2" data-path="6C_heisenberg.html"><a href="6C_heisenberg.html#introducing-the-chirpiness-to-the-heisenberg-group"><i class="fa fa-check"></i><b>C.2</b> Introducing the chirpiness to the Heisenberg group</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="7_refs.html"><a href="7_refs.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="book.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> PDF book</a></li>
+<li><a href="onepage.html" target="_blank"><i class="fa fa-file-code-o"></i> HTML standalone version</a></li>
+<li><a href="presentation.pdf" target="_blank"><img class="icon" src="include/presentation.svg"> Presentation slides</a></li>
+<li><a href="https://github.com/rand-asswad/WCA1" target="_blank"><i class="fa fa-github"></i> Github repository</a></li>
+<li><a href="https://github.com/rand-asswad/WCA1/archive/refs/heads/master.zip"><i class="fa fa-download"></i> Download source code</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A bio-inspired geometric model for sound reconstruction</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+
+<div id="refs" class="references csl-bib-body">
+<div class="csl-entry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">2021. Stack <span>Overflow</span> <span>Developer</span> <span>Survey</span> 2021. Retrieved from <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages">https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Laboratory of signals and systems <span></span> <span>L2S</span> <span></span> <span>Paris</span>-<span>Saclay</span> <span>University</span>. Retrieved July 29, 2021 from <a href="https://l2s.centralesupelec.fr/">https://l2s.centralesupelec.fr/</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Viral Shah al Stefan Karpinski. Announcing the release of <span>Julia</span> 1.0. Retrieved August 17, 2021 from <a href="https://julialang.org/blog/2018/08/one-point-zero/">https://julialang.org/blog/2018/08/one-point-zero/</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Rand Asswad, Ugo Boscain, Giuseppina Turco, Dario Prandi, and Ludovic Sacchelli. 2021. An <span>Auditory</span> <span>Cortex</span> <span>Model</span> for <span>Sound</span> <span>Processing</span>. 56–64. DOI:https://doi.org/<a href="https://doi.org/10.1007/978-3-030-80209-7_7">10.1007/978-3-030-80209-7_7</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Marcelo Bertalmío, Luca Calatroni, Valentina Franceschi, Benedetta Franceschiello, and Dario Prandi. 2018. A cortical-inspired model for orientation-dependent contrast perception: A link with <span>Wilson</span>-<span>Cowan</span> equations. <em>arXiv:1812.07425 [cs]</em> (December 2018). Retrieved November 12, 2020 from <a href="http://arxiv.org/abs/1812.07425">http://arxiv.org/abs/1812.07425</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Ugo Boscain, Roman Chertovskih, Jean-Paul Gauthier, Dario Prandi, and Alexey Remizov. 2017. Cortical-inspired image reconstruction via sub-<span>Riemannian</span> geometry and hypoelliptic diffusion. In <em><span>SMAI</span> 2017 - 8e <span>Biennale</span> <span>Française</span> des <span>Mathématiques</span> <span>Appliquées</span> et <span>Industrielles</span></em>, La Tremblade, France, 37–53. DOI:https://doi.org/<a href="https://doi.org/10.1051/proc/201864037">10.1051/proc/201864037</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Ugo Boscain, Dario Prandi, Ludovic Sacchelli, and Giuseppina Turco. 2021. A bio-inspired geometric model for sound reconstruction. <em>The Journal of Mathematical Neuroscience</em> 11, 1 (January 2021), 2. DOI:https://doi.org/<a href="https://doi.org/10.1186/s13408-020-00099-4">10.1186/s13408-020-00099-4</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Paul C. Bressloff and Jack D. Cowan. 2002. An <span>Amplitude</span> <span>Equation</span> <span>Approach</span> to <span>Contextual</span> <span>Effects</span> in <span>Visual</span> <span>Cortex</span>. <em>Neural Computation</em> 14, 3 (March 2002), 493–525. DOI:https://doi.org/<a href="https://doi.org/10.1162/089976602317250870">10.1162/089976602317250870</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Paul C. Bressloff, Jack D. Cowan, Martin Golubitsky, Peter J. Thomas, and Matthew C. Wiener. 2002. What <span>Geometric</span> <span>Visual</span> <span>Hallucinations</span> <span>Tell</span> <span>Us</span> about the <span>Visual</span> <span>Cortex</span>. <em>Neural Computation</em> 14, 3 (March 2002), 473–491. DOI:https://doi.org/<a href="https://doi.org/10.1162/089976602317250861">10.1162/089976602317250861</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">G. Citti and A. Sarti. 2006. A <span>Cortical</span> <span>Based</span> <span>Model</span> of <span>Perceptual</span> <span>Completion</span> in the <span>Roto</span>-<span>Translation</span> <span>Space</span>. <em>Journal of Mathematical Imaging and Vision</em> 24, 3 (May 2006), 307–326. DOI:https://doi.org/<a href="https://doi.org/10.1007/s10851-005-3630-2">10.1007/s10851-005-3630-2</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">Wikimedia Commons. 2013. Resolution difference between the <span>Short</span>-<span>Time</span> <span>Fourier</span> <span>Transform</span> and the <span>Wavelet</span> <span>Transform</span>. Retrieved September 9, 2021 from <a href="https://commons.wikimedia.org/wiki/File:STFT_and_WT.jpg">https://commons.wikimedia.org/wiki/File:STFT_and_WT.jpg</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">P. Dallos. 1996. Overview: <span>Cochlear</span> <span>Neurobiology</span>: <span>Springer</span> <span>Handbook</span> of <span>Auditory</span> <span>Research</span>. <em>The Cochlea: Springer Handbook of Auditory Research</em> (1996), 1–43. Retrieved August 13, 2021 from <a href="https://www.scholars.northwestern.edu/en/publications/overview-cochlear-neurobiology-springer-handbook-of-auditory-rese">https://www.scholars.northwestern.edu/en/publications/overview-cochlear-neurobiology-springer-handbook-of-auditory-rese</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">G. B. Ermentrout and J. D. Cowan. 1979. A mathematical theory of visual hallucination patterns. <em>Biological Cybernetics</em> 34, 3 (October 1979), 137–150. DOI:https://doi.org/<a href="https://doi.org/10.1007/BF00336965">10.1007/BF00336965</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">D. Griffin and Jae S. Lim. 1983. Signal estimation from modified short-time <span>Fourier</span> transform. <em>undefined</em> (1983). Retrieved September 3, 2021 from <a href="https://www.semanticscholar.org/paper/Signal-estimation-from-modified-short-time-Fourier-Griffin-Lim/14bc876fae55faf5669beb01667a4f3bd324a4f1">https://www.semanticscholar.org/paper/Signal-estimation-from-modified-short-time-Fourier-Griffin-Lim/14bc876fae55faf5669beb01667a4f3bd324a4f1</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">Karlheinz Gröchenig. 2001. <em>Foundations of <span>Time</span>-<span>Frequency</span> <span>Analysis</span></em>. Birkhäuser Basel. DOI:https://doi.org/<a href="https://doi.org/10.1007/978-1-4612-0003-1">10.1007/978-1-4612-0003-1</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">Gerhard Heinzel, Albrecht Rüdiger, and Roland Schilling. 2002. Spectrum and spectral density estimation by the <span>Discrete</span> <span>Fourier</span> transform (<span>DFT</span>), including a comprehensive list of window functions and some new at-top windows. (2002). Retrieved September 9, 2021 from <a href="https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_152164">https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_152164</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">William C. Hoffman. 1989. The visual cortex is a contact bundle. <em>Applied Mathematics and Computation</em> 32, 2 (August 1989), 137–167. DOI:https://doi.org/<a href="https://doi.org/10.1016/0096-3003(89)90091-X">10.1016/0096-3003(89)90091-X</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">D. H. Hubel and T. N. Wiesel. 1959. Receptive fields of single neurones in the cat’s striate cortex. <em>The Journal of Physiology</em> 148, 3 (1959), 574–591. DOI:https://doi.org/<a href="https://doi.org/10.1113/jphysiol.1959.sp006308">10.1113/jphysiol.1959.sp006308</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">Alex Loebel, Israel Nelken, and Misha Tsodyks. 2007. Processing of sounds by population spikes in a model of primary auditory cortex. <em>Frontiers in Neuroscience</em> 1, 1 (November 2007), 197–209. DOI:https://doi.org/<a href="https://doi.org/10.3389/neuro.01.1.1.015.2007">10.3389/neuro.01.1.1.015.2007</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">S. Mann and S. Haykin. 1992. ’<span>Chirplets</span>’ and ’warblets’: Novel time-frequency methods. <em>Electronics Letters</em> 28, (January 1992), 114. DOI:https://doi.org/<a href="https://doi.org/10.1049/el:19920070">10.1049/el:19920070</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">Meinard Müller. 2015. <em>Fundamentals of <span>Music</span> <span>Processing</span> - <span>Audio</span>, <span>Analysis</span>, <span>Algorithms</span>, <span>Applications</span></em>. Springer. Retrieved from <a href="https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP">https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">Jean Petitot and Yannick Tondut. 1999. Vers une neurogéométrie. <span>Fibrations</span> corticales, structures de contact et contours subjectifs modaux. <em>Mathématiques et Sciences Humaines</em> 145, (1999), 5–101. Retrieved August 13, 2021 from <a href="https://eudml.org/doc/94522">https://eudml.org/doc/94522</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[23] </div><div class="csl-right-inline">James Rankin, Elyse Sussman, and John Rinzel. 2015. Neuromechanistic <span>Model</span> of <span>Auditory</span> <span>Bistability</span>. <em>PLoS computational biology</em> 11, 11 (November 2015), e1004555. DOI:https://doi.org/<a href="https://doi.org/10.1371/journal.pcbi.1004555">10.1371/journal.pcbi.1004555</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">Hans Martin Reimann. 2011. Signal processing in the cochlea: The structure equations. <em>The Journal of Mathematical Neuroscience</em> 1, 1 (June 2011), 5. DOI:https://doi.org/<a href="https://doi.org/10.1186/2190-8567-1-5">10.1186/2190-8567-1-5</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">Curtis Roads. 2002. Microsound. (March 2002). DOI:https://doi.org/<a href="https://doi.org/10.7551/mitpress/4601.001.0001">10.7551/mitpress/4601.001.0001</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[26] </div><div class="csl-right-inline">Debashis Sen. 2014. The uncertainty relations in quantum mechanics. <em>Current science</em> 107, (July 2014), 203–218. DOI:https://doi.org/<a href="https://doi.org/10.13140/2.1.5183.0406">10.13140/2.1.5183.0406</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">Hugh R. Wilson and Jack D. Cowan. 1972. Excitatory and <span>Inhibitory</span> <span>Interactions</span> in <span>Localized</span> <span>Populations</span> of <span>Model</span> <span>Neurons</span>. <em>Biophysical Journal</em> 12, 1 (January 1972), 1–24. DOI:https://doi.org/<a href="https://doi.org/10.1016/S0006-3495(72)86068-5">10.1016/S0006-3495(72)86068-5</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">Xiaowei Yang, Kuansan Wang, and Shihab Shamma. 1992. Auditory representations of acoustic signals. <em>Information Theory, IEEE Transactions on</em> 38, (April 1992), 824–839. DOI:https://doi.org/<a href="https://doi.org/10.1109/18.119739">10.1109/18.119739</a></div>
+</div>
+<div class="csl-entry">
+<div class="csl-left-margin">[29] </div><div class="csl-right-inline">Isma Zulfiqar, Michelle Moerel, and Elia Formisano. 2019. Spectro-<span>Temporal</span> <span>Processing</span> in a <span>Two</span>-<span>Stream</span> <span>Computational</span> <span>Model</span> of <span>Auditory</span> <span>Cortex</span>. <em>Frontiers in Computational Neuroscience</em> 13, (2019), 95. DOI:https://doi.org/<a href="https://doi.org/10.3389/fncom.2019.00095">10.3389/fncom.2019.00095</a></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="6C_heisenberg.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": {}
+},
+"fontsettings": false,
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["book.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
