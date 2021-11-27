@@ -107,6 +107,12 @@ the function's readability nor memory consumption.
     \end{minipage}
 \end{figure}
 
+`r if (is_html_output()) '
+![The benchmarked median time for each method ploted against the speech samples](img/benchmark_median_time.png){width="100%"}
+
+![Box plots of the benchmarked time for each method on the samples from the speech library](img/benchmark_time_boxplot.png){width="100%"}
+'`
+
 It is worth noting that all of the tested methods outperform
 the preexisting implementation which had redundant loops
 for memory allocation and variable assignment.
@@ -125,6 +131,19 @@ for memory allocation and variable assignment.
     \end{minipage}
     \caption{\label{fig:experiments}Distance of noisy sound to original one before (blue) and after (red) the processing, plotted against the standard deviation of the noise ($\varepsilon$). \emph{Left:} standard deviation metric. \emph{Right:} $\norm{\cdot}$ norm.}
 \end{figure}
+
+`r if (is_html_output()) '
+<img src="img/std_diff.png"  width="49%" class="inline">
+<img src="img/norm_diff.png" width="49%" class="inline">
+
+<p class="caption">
+Distance of noisy sound to original one before (blue) and after (red) the processing,
+plotted against the standard deviation of the noise
+(<span class="math inline">\\(\\varepsilon\\)</span>).
+<em>Left:</em> standard deviation metric.
+<em>Right:</em> <span class="math inline">\\(\\norm{\\cdot}\\)</span> norm.
+</p>
+'`
 
 In the figure above, we present the results of the algorithm applied to a denoising task.
 Namely, given a sound signal $s$, we let $s_\epsilon = s + g_\epsilon$,

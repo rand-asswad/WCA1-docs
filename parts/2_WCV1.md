@@ -57,4 +57,13 @@ of neurons with V1 coordinates $x\in\R^2$ and orientation $\theta\in P^1$ at tim
     \label{fig:img-reconstruct}
 \end{figure}
 
+`r if (is_html_output()) '
+<img src="img/img_original.jpg" width="250" class="inline">
+<img src="img/img_corrupted.png" width="250" class="inline">
+<img src="img/img_reconstructed.png" width="250" class="inline">
+
+<p class="caption">Reconstruction of a 97% corrupted image
+(left: original, middle: corrupted, right: reconstructed)</p>
+'`
+
 \pagebreak

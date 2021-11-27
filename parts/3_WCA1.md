@@ -164,6 +164,16 @@ spectral leakage.
     \caption{Different windows (left) and their respective Fourier transform (right)}
 \end{figure}
 
+`r if (is_html_output()) '
+![(a) Rectangular window](img/w_rectangle.png)
+
+![(b) Triangular window](img/w_triangle.png)
+
+![(c) Hann window](img/w_hann.png)
+
+<p class="caption">Different windows (left) and their respective Fourier transform (right)</p>
+'`
+
 Moreover, as we will see in the next sections, the STFT is invertible.
 However, the STFT parameters need to satisfy the two following constraints [@muller2015;@griffin1983]:
 
@@ -196,6 +206,16 @@ imposing a stronger condition.
 	\end{subfigure}
     \caption{The COLA condition with different windows and overlap ratios}
 \end{figure}
+
+`r if (is_html_output()) '
+![(a) Triangular window, overlap ratio $r=\\frac{1}{2}$](img/woa_triangular_1_2.png)
+
+![(b) Hann window, overlap ratio $r=\\frac{1}{2}$](img/woa_hann_1_2.png)
+
+![(c) Hann window, overlap ratio $r=\\frac{3}{8}$](img/woa_hann_3_8.png)
+
+<p class="caption">The COLA condition with different windows and overlap ratios</p>
+'`
 
 In typical applications, the window functions used are non-negative,
 smooth, bell-shaped curves [@roads2002].
@@ -468,6 +488,10 @@ following a Cauchy distribution $\Cd(x_0,\gamma)$ [@asswad2021] where
 - $x_0$ is the location parameter that corresponds to the location of the peak
 - $\gamma$ is the scale parameter that determines the shape of the distribution
 
+`r if (is_html_output()) '
+![Chirpiness of a speech signal compared to Cauchy distribution](img/cauchy_dist_pdf.png)
+'`
+
 The Cauchy distribution's probability density function (PDF) is given as
 \begin{equation}
 f_X(x)=\frac{1}{\pi\gamma\pp{1+\pp{\frac{x-x_0}{\gamma}}^2}}
@@ -500,6 +524,17 @@ D_n=\sup_x\abs{F_n(x)-F_X(x)}
 \end{equation}
 where $F_n$ is the empirical distribution function
 evaluated over the chirpiness values [@asswad2021].
+
+`r if (is_html_output()) '
+<img src="img/cauchy_pt_estimate_iqr_2.png" width="100" class="inline" style="margin-left: 300px;">
+<img src="img/cauchy_values_percentage_iqr_2.png" width="100" class="inline">
+
+<p class="caption">
+    Box plots for estimated Cauchy distributions of speech signals chirpiness.
+    <em>Left:</em> Kolmogorov-Smirnov statistic values.
+    <em>Right:</em> percentage of values falling in <span class="math inline">\\(I_{0.95}\\)</span>
+</p>
+'`
 
 ## Cortical activations in A1
 

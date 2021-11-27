@@ -29,6 +29,12 @@ img {
 	margin-right: auto;
 }
 
+img.inline {
+    display: inline;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .caption, figcaption {
 	text-align: center;
 }
