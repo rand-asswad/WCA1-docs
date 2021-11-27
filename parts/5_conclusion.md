@@ -198,4 +198,6 @@ I cultivated at INSA Rouen Normandie, to pursue a PhD in these domains.
 
 \pagebreak
 
+`r if (knitr::is_latex_output()) '
 # References {-}
+'`

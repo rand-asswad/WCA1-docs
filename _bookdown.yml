@@ -9,5 +9,8 @@ rmd_files:
   - parts/3_WCA1.md
   - parts/4_implementation.md
   - parts/5_conclusion.md
-  - parts/6_appendix.md
+  - parts/6A_stft.md
+  - parts/6B_uncertainty.md
+  - parts/6C_heisenberg.md
+  - parts/7_refs.md
 output_dir: _out

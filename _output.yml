@@ -1,6 +1,6 @@
 bookdown::pdf_book:
   toc: true
-  toc_depth: 3
+  toc_depth: 2
   keep_tex: true
   number_sections: true
   fig_caption: true
@@ -23,7 +23,7 @@ bookdown::gitbook:
       after: |
         <li><a href="book.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> PDF book</a></li>
         <li><a href="onepage.html" target="_blank"><i class="fa fa-file-code-o"></i> HTML standalone version</a></li>
-        <li><a href="presentation.html" target="_blank"><img class="icon" src="include/presentation.svg"> Presentation slides</a></li>
+        <li><a href="presentation.pdf" target="_blank"><img class="icon" src="include/presentation.svg"> Presentation slides</a></li>
         <li><a href="https://github.com/rand-asswad/WCA1" target="_blank"><i class="fa fa-github"></i> Github repository</a></li>
         <li><a href="https://github.com/rand-asswad/WCA1/archive/refs/heads/master.zip"><i class="fa fa-download"></i> Download source code</a></li>
     toolbar:

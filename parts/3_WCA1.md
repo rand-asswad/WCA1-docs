@@ -90,7 +90,7 @@ Essentially, the STFT $S(\tau,\w)$ is the Fourier transform of $s(t)w(t-\tau)$
 S(\tau,\w) = \int_\R s(t)w(t-\tau)e^{-2\pi i\w t} \dt
 \end{equation}
 
-![Signal windowing for the STFT [@grochenig2001]](img/stft_grochenig.png){width=40%}
+![Signal windowing for the STFT [@grochenig2001]](img/stft_grochenig.png){width=37%}
 
 ### Time and frequency shifts operators
 
@@ -223,6 +223,7 @@ Similarly, time and frequency are a pair of complementary variables.
 
 In the context of time-frequency analysis, the Heisenberg-Gabor limit
 (or simply the Gabor limit) defines this constraint by the following inequality
+(proof in Appendix \@ref(uncertainty))
 
 \begin{equation}
 \sigma_t\cdot\sigma_\w \geq \frac{1}{4\pi}
@@ -459,17 +460,31 @@ chirpiness values stretch over the entire real line.
 \end{figure}
 
 To overcome this problem, a natural strategy is to model the chirpiness values as
-a random variable, and considering only chirpinesses falling inside the confidence
-interval $I_p$ for some reasonable $p$-value (e.g., $p=0.95$). 
-A reasonable assumption for the distribution of $X$ is that it follows
-a Cauchy distribution $\Cd(x_0, \gamma)$.
-Indeed, this corresponds to assuming that $\partial_\omega\abs{S}$ and
-$\partial_\tau\abs{S}$ are normal (and independent) distributions [@papoulis1991].
-As it is customary, we chose as estimator for the location parameter $x_0$ the median of $X$
-and for the scale parameter $\gamma$ half the interquartile distance.
+a random variable $X$, and considering only chirpinesses falling inside the confidence
+interval $I_p$ for some reasonable $p$-value (e.g., $p=0.95$).
+The best fit for the chirpiness values was the random variable $X$
+following a Cauchy distribution $\Cd(x_0,\gamma)$ [@asswad2021] where
 
-Although statistical tests on a library of real-world speech signals
-^[The speech material used in the current study is part of an ongoing
+- $x_0$ is the location parameter that corresponds to the location of the peak
+- $\gamma$ is the scale parameter that determines the shape of the distribution
+
+The Cauchy distribution's probability density function (PDF) is given as
+\begin{equation}
+f_X(x)=\frac{1}{\pi\gamma\pp{1+\pp{\frac{x-x_0}{\gamma}}^2}}
+\end{equation}
+and it's cumulative distribution function (CDF) is
+\begin{equation}
+F_X(x)=\frac{1}{\pi} \arctan\pp{\frac{x-x_0}{\gamma}} + \frac{1}{2}
+\end{equation}
+
+The Cauchy parameters were estimated as follows:
+
+- $x_0$: the chirpiness samples median
+- $\gamma$: half the interquartile range which is the difference between
+  the 75^th^ and the 25^th^ percentile.
+
+Although statistical tests on a library of real-world speech
+signals^[The speech material used in the current study is part of an ongoing
 psycholinguistic project on spoken word recognition.
 Speech material comprises 49 Italian words and 118 French words.
 The two sets of words were produced by two (40-year-old) female speakers
@@ -480,8 +495,10 @@ et Phonologie (LPP) of Université de Paris Sorbonne-Nouvelle.
 Both informants were told to read the set of words as fluently and naturally as possible]
 rejected the assumption that $X\sim \Cd(x_0,\gamma)$,
 the fit is quite good according to the Kolmogorov-Smirnov statistic
-$D_n=\sup_x\abs{F_n(x)-F_X(x)}$. Here, $F_X$ is the cumulative distribution function
-of $X$ and $F_n$ is the empirical distribution function
+\begin{equation}
+D_n=\sup_x\abs{F_n(x)-F_X(x)}
+\end{equation}
+where $F_n$ is the empirical distribution function
 evaluated over the chirpiness values [@asswad2021].
 
 ## Cortical activations in A1
