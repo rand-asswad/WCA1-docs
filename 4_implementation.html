@@ -274,6 +274,14 @@ The explicit expression and the affine expression were both implemented
 using a traditional loop, list comprehension, and Julia’s broadcast operator.
 The list comprehension was clearly the fastest, without compromising
 the function’s readability nor memory consumption.</p>
+<div class="figure">
+<img src="img/benchmark_median_time.png" style="width:100.0%" alt="" />
+<p class="caption">The benchmarked median time for each method ploted against the speech samples</p>
+</div>
+<div class="figure">
+<img src="img/benchmark_time_boxplot.png" style="width:100.0%" alt="" />
+<p class="caption">Box plots of the benchmarked time for each method on the samples from the speech library</p>
+</div>
 <p>It is worth noting that all of the tested methods outperform
 the preexisting implementation which had redundant loops
 for memory allocation and variable assignment.</p>
@@ -281,6 +289,15 @@ for memory allocation and variable assignment.</p>
 </div>
 <div id="results" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Results</h2>
+<p><img src="img/std_diff.png"  width="49%" class="inline">
+<img src="img/norm_diff.png" width="49%" class="inline"></p>
+<p class="caption">
+Distance of noisy sound to original one before (blue) and after (red) the processing,
+plotted against the standard deviation of the noise
+(<span class="math inline"><span class="math inline">\(\varepsilon\)</span></span>).
+<em>Left:</em> standard deviation metric.
+<em>Right:</em> <span class="math inline"><span class="math inline">\(\left\lVert\cdot\right\rVert\)</span></span> norm.
+</p>
 <p>In the figure above, we present the results of the algorithm applied to a denoising task.
 Namely, given a sound signal <span class="math inline">\(s\)</span>, we let <span class="math inline">\(s_\varepsilon= s + g_\varepsilon\)</span>,
 where <span class="math inline">\(g_\varepsilon\sim \mathcal N(0,\varepsilon)\)</span> is a gaussian random variable.

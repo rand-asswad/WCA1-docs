@@ -327,6 +327,21 @@ resolution, as well as its invertibility.</p>
 <p>The choice of the window affects quality of the Fourier transform.
 One should choose a window with anti-aliasing and that distributes
 spectral leakage.</p>
+<div class="figure">
+<img src="img/w_rectangle.png" alt="" />
+<p class="caption">(a) Rectangular window</p>
+</div>
+<div class="figure">
+<img src="img/w_triangle.png" alt="" />
+<p class="caption">(b) Triangular window</p>
+</div>
+<div class="figure">
+<img src="img/w_hann.png" alt="" />
+<p class="caption">(c) Hann window</p>
+</div>
+<p class="caption">
+Different windows (left) and their respective Fourier transform (right)
+</p>
 <p>Moreover, as we will see in the next sections, the STFT is invertible.
 However, the STFT parameters need to satisfy the two following constraints <span class="citation">[<a href="#ref-griffin1983" role="doc-biblioref">14</a>,<a href="#ref-muller2015" role="doc-biblioref">21</a>]</span>:</p>
 <ul>
@@ -338,6 +353,21 @@ It is worth noting that this condition can be found without the square
 depending on the inverse STFT algorithm.</p>
 <p>The COLA constraint defines the partition of unity over the discrete time axis,
 imposing a stronger condition.</p>
+<div class="figure">
+<img src="img/woa_triangular_1_2.png" alt="" />
+<p class="caption">(a) Triangular window, overlap ratio <span class="math inline">\(r=\frac{1}{2}\)</span></p>
+</div>
+<div class="figure">
+<img src="img/woa_hann_1_2.png" alt="" />
+<p class="caption">(b) Hann window, overlap ratio <span class="math inline">\(r=\frac{1}{2}\)</span></p>
+</div>
+<div class="figure">
+<img src="img/woa_hann_3_8.png" alt="" />
+<p class="caption">(c) Hann window, overlap ratio <span class="math inline">\(r=\frac{3}{8}\)</span></p>
+</div>
+<p class="caption">
+The COLA condition with different windows and overlap ratios
+</p>
 <p>In typical applications, the window functions used are non-negative,
 smooth, bell-shaped curves <span class="citation">[<a href="#ref-roads2002" role="doc-biblioref">25</a>]</span>.
 A comprehensive list of windows and their properties may be found in <span class="citation">[<a href="#ref-heinzel2002" role="doc-biblioref">16</a>]</span>.
@@ -560,6 +590,10 @@ following a Cauchy distribution <span class="math inline">\(\mathrm{Cauchy}(x_0,
 <li><span class="math inline">\(x_0\)</span> is the location parameter that corresponds to the location of the peak</li>
 <li><span class="math inline">\(\gamma\)</span> is the scale parameter that determines the shape of the distribution</li>
 </ul>
+<div class="figure">
+<img src="img/cauchy_dist_pdf.png" alt="" />
+<p class="caption">Chirpiness of a speech signal compared to Cauchy distribution</p>
+</div>
 <p>The Cauchy distribution’s probability density function (PDF) is given as
 <span class="math display">\[\begin{equation}
 f_X(x)=\frac{1}{\pi\gamma\left(1+\left(\frac{x-x_0}{\gamma}\right)^2\right)}
@@ -583,6 +617,13 @@ D_n=\sup_x\left\lvert F_n(x)-F_X(x)\right\rvert
 \end{equation}\]</span>
 where <span class="math inline">\(F_n\)</span> is the empirical distribution function
 evaluated over the chirpiness values <span class="citation">[<a href="#ref-asswad2021" role="doc-biblioref">4</a>]</span>.</p>
+<p><img src="img/cauchy_pt_estimate_iqr_2.png" width="100" class="inline" style="margin-left: 300px;">
+<img src="img/cauchy_values_percentage_iqr_2.png" width="100" class="inline"></p>
+<p class="caption">
+Box plots for estimated Cauchy distributions of speech signals chirpiness.
+<em>Left:</em> Kolmogorov-Smirnov statistic values.
+<em>Right:</em> percentage of values falling in <span class="math inline"><span class="math inline">\(I_{0.95}\)</span></span>
+</p>
 </div>
 </div>
 <div id="cortical-activations-in-a1" class="section level2" number="3.5">
